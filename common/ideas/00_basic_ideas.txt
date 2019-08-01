@@ -61,6 +61,7 @@ aristocracy_ideas = {
 	category = MIL
 
 	bonus = {
+		monarch_military_power = 1
 		possible_mil_policy = 1
 	}
 
