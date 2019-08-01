@@ -1,0 +1,17 @@
+#4041 - Kinga
+
+culture = bena
+religion = shamanism #Fetishism
+trade_goods = tropical_wood
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 1
+add_core = TBK
+owner = TBK
+controller = TBK
+is_city = yes
+capital = "Kinga"
+
+discovered_by = east_african
+discovered_by = central_african

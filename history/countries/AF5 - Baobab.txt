@@ -1,0 +1,11 @@
+government = tribal
+add_government_reform = tribal_despotism
+government_rank = 3
+primary_culture = madagasque
+religion = shamanism #Fetishism
+technology_group = central_african
+unlock_cult = roog_cult
+unlock_cult = mwari_cult
+unlock_cult = enkai_cult
+capital = 1193
+religious_school = maliki_school

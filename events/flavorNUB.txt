@@ -1,0 +1,8 @@
+########################################
+# Events for Nubia
+#
+# written by Johan Andersson
+########################################
+
+namespace = flavor_nub
+normal_or_historical_nations = yes

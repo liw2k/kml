@@ -1,0 +1,16 @@
+#4043 - Phangwa
+
+culture = nyasa
+religion = shamanism #Fetishism
+trade_goods = grain
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 1
+add_core = TBK
+owner = TBK
+controller = TBK
+is_city = yes
+
+capital = "Phangwa"
+discovered_by = central_african

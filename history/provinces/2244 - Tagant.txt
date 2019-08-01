@@ -1,0 +1,18 @@
+# No previous file for Tagant
+
+culture = fulani 
+religion = shamanism #Fetishism
+capital = "Kiffa"
+hre = no
+base_tax = 1 
+base_production = 1
+owner = FUL 
+controller = FUL 
+add_core = FUL
+trade_goods = livestock
+is_city = yes
+base_manpower = 1
+
+
+
+discovered_by = sub_saharan

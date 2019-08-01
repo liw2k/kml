@@ -1,0 +1,63 @@
+
+#Zoro events
+
+namespace = zoro_events
+
+country_event = {
+	id = zoro_events.1
+	title = "zoro_events.1.t"
+	desc = "zoro_events.1.d"
+	picture = PRAYING_eventPicture
+
+	trigger = {
+		religion = zoroastrian
+		has_dlc = "Wealth of Nations"
+		has_regency = no
+		NOT = { has_personal_deity = anahita }
+		NOT = { has_personal_deity = bahram }
+		NOT = { has_personal_deity = rashnu }
+		NOT = { has_personal_deity = nairyosangha }
+		NOT = { has_personal_deity = mithra }
+		NOT = { has_personal_deity = akhshti }
+	}
+
+	mean_time_to_happen = {
+		months = 45
+	}
+
+	#Anahita
+	option = {
+		name = "zoro_events.1.a"
+		change_personal_deity = anahita
+	}
+
+	#Bahram
+	option = {
+		name = "zoro_events.1.b"
+		change_personal_deity = bahram
+	}
+
+	#Rashnu
+	option = {
+		name = "zoro_events.1.c"
+		change_personal_deity = rashnu
+	}
+
+	#Nairyosangha
+	option = {
+		name = "zoro_events.1.e"
+		change_personal_deity = nairyosangha
+	}
+
+	#Mithra
+	option = {
+		name = "zoro_events.1.f"
+		change_personal_deity = mithra
+	}
+
+	#Akhshti
+	option = {
+		name = "zoro_events.1.g"
+		change_personal_deity = akhshti
+	}
+}

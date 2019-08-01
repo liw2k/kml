@@ -1,0 +1,16 @@
+#4073 - Hehe
+
+culture = bena
+religion = shamanism #Fetishism
+trade_goods = tropical_wood
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 1
+add_core = UBH
+owner = UBH
+controller = UBH
+is_city = yes
+capital = "Hehe"
+
+discovered_by = central_african

@@ -1,0 +1,24 @@
+#2856 - Highveld
+
+latent_trade_goods = {
+	coal
+}
+
+culture = nguni
+religion = shamanism #Fetishism
+capital = "Highveld"
+trade_goods = grain
+hre = no
+base_tax = 2 
+base_production = 2
+base_manpower = 1
+add_core = AF3
+owner = AF3
+controller = AF3
+is_city = yes
+
+discovered_by = AF4
+
+
+1750.1.1 = { discovered_by = NED }
+

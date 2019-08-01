@@ -1,0 +1,17 @@
+# - Al-Junaynah
+
+culture = nubian 
+religion = shiite #Fetishism
+capital = "Al-Junaynahr"
+add_core = DAR
+owner = DAR
+controller = DAR
+is_city = yes
+trade_goods = slaves
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 1
+
+discovered_by = sub_saharan
+discovered_by = east_african

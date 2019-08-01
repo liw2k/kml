@@ -1,0 +1,87 @@
+country_decisions = {
+
+	chin_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			NOT = { has_country_flag = formed_chin_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				ai = no
+				NOT = { exists = CIN }
+			}
+			culture_group = east_asian
+			NOT = { tag = MCH }
+			NOT = { tag = QNG }
+			NOT = { tag = MNG }
+			religion = confucianism
+		}
+		provinces_to_highlight = {
+			OR = { 
+				province_id = 684 # hangzhou
+				province_id = 2151 # poyang
+				province_id = 4196 # haizhou
+				province_id = 1824 # wenzhou
+				province_id = 667 # canton
+				province_id = 1821 # nanjing
+				province_id = 1836 # louyang
+				province_id = 693 # taiyuan
+				province_id = 679 # chengdu
+				province_id = 682 # wuchang
+				province_id = 662 # yunnan
+				province_id = 1816 # beijing
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			is_tribal = no
+			NOT = { exists = CIN }
+			owns_core_province = 684 # hangzhou
+			owns_core_province = 2151 # poyang
+			owns_core_province = 4196 # haizhou
+			owns_core_province = 1824 # wenzhou
+			owns_core_province = 667 # canton
+			owns_core_province = 1821 # nanjing
+			owns_core_province = 1836 # louyang
+			owns_core_province = 693 # taiyuan
+			owns_core_province = 679 # chengdu
+			owns_core_province = 682 # wuchang
+			owns_core_province = 662 # yunnan
+			owns_core_province = 1816 # beijing
+		}
+		effect = {
+			change_tag = CIN
+			if = {
+				limit = { NOT = { government_rank = 3 } }
+				set_government_rank = 3
+			}
+			china_superregion = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = CIN
+			}
+			1836 = {
+				move_capital_effect = yes
+			}
+			add_stability_or_adm_power = yes
+			add_prestige = 15
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = formed_chin_flag			
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	
+}

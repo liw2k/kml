@@ -1,0 +1,18 @@
+#1221 - Kordofan
+
+culture = nubian
+religion = coptic
+capital = "Al-Ubayyid"
+base_manpower = 1
+owner = NUB
+controller = NUB
+add_core = NUB
+is_city = yes
+trade_goods = slaves
+hre = no
+base_tax = 1 
+base_production = 1
+
+discovered_by = east_african
+discovered_by = muslim
+discovered_by = ottoman

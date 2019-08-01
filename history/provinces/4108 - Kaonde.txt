@@ -1,0 +1,13 @@
+culture = bemba
+religion = shamanism #Fetishism
+trade_goods = grain
+capital = "Kaonde"
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 1
+add_core = CKW
+owner = CKW
+controller = CKW
+is_city = yes
+discovered_by = central_african

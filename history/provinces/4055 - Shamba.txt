@@ -1,0 +1,16 @@
+#4055 - Shamba
+
+culture = swahili
+religion = shamanism #Fetishism
+trade_goods = tropical_wood
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 1
+add_core = MBA
+owner = MBA
+controller = MBA
+is_city = yes
+discovered_by = central_african
+discovered_by = east_african
+capital = "Shambaa"

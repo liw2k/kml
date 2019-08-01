@@ -1,0 +1,17 @@
+# - Waddai
+
+culture = nubian 
+religion = shiite #Fetishism
+capital = "Ouara"
+owner = DAR
+controller = DAR
+is_city = yes
+trade_goods = slaves
+add_core = DAR
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 1
+
+discovered_by = sub_saharan
+discovered_by = east_african

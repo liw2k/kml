@@ -1,0 +1,83 @@
+country_decisions = {
+
+	taoism_influence = {
+	
+		potential = {
+			religion = confucianism
+			OR = {
+				technology_group = chinese
+				technology_group = steppe_nomad
+			}
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			ai = no
+		}
+		
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = recently_influenced_doctrine_flag_tooltip
+				OR = {
+					NOT = { has_country_flag = spreading_taoism_flag }
+					had_country_flag = { flag = spreading_taoism_flag days = 5475 }
+				}
+				OR = {
+					NOT = { has_country_flag = spreading_legalism_flag }
+					had_country_flag = { flag = spreading_legalism_flag days = 5475 }
+				}
+			}
+		}
+		
+		effect = {
+			add_years_of_income = -0.15
+			add_country_modifier = { 
+				name = taoism_influence_modifier
+				duration = 3650
+			}
+			set_country_flag = spreading_taoism_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	legalism_influence = {
+	
+		potential = {
+			religion = confucianism
+			OR = {
+				technology_group = chinese
+				technology_group = steppe_nomad
+			}
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			ai = no
+		}
+		
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = recently_influenced_doctrine_flag_tooltip
+				OR = {
+					NOT = { has_country_flag = spreading_taoism_flag }
+					had_country_flag = { flag = spreading_taoism_flag days = 5475 }
+				}
+				OR = {
+					NOT = { has_country_flag = spreading_legalism_flag }
+					had_country_flag = { flag = spreading_legalism_flag days = 5475 }
+				}
+			}
+		}
+		
+		effect = {
+			add_years_of_income = -0.15
+			add_country_modifier = { 
+				name = legalism_influence_modifier
+				duration = 3650
+			}
+			set_country_flag = spreading_legalism_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+}

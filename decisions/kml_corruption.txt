@@ -1,0 +1,32 @@
+country_decisions = {
+
+	corruption_crackdown = {
+	
+		potential = {
+			corruption = 5
+			is_free_or_tributary_trigger = yes
+			NOT = { has_country_modifier = corruption_reduced_by_force }
+			ai = no
+			is_at_war = no
+		}
+		
+		allow = {
+			adm_power = 100
+			years_of_income = 3.5
+		}
+		
+		effect = {
+			add_adm_power = -100
+			add_years_of_income = -3.5
+			add_corruption = -5
+			add_country_modifier = { 
+				name = corruption_reduced_by_force
+				duration = 5475
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+}

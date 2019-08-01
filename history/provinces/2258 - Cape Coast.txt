@@ -1,0 +1,40 @@
+
+#Represents forts in western Ghana, from Axim to Elmina, mostly Elmina
+
+culture = aka
+religion = shamanism #Fetishism
+capital = "Axim"
+trade_goods = ivory
+hre = no
+base_tax = 2 
+base_production = 2
+add_core = AF1
+owner = AF1
+controller = AF1
+is_city = yes
+base_manpower = 1
+discovered_by = sub_saharan
+extra_cost = 8
+center_of_trade = 1
+
+
+1471.1.1 = { discovered_by = POR } # Frenão do Pó
+
+1482.1.19 = {
+	controller = POR
+	owner = POR
+	add_core = POR
+	culture = portugese
+	religion = catholic
+	capital = "Sao Jorge da Mina"
+	trade_goods = gold
+	is_city = yes
+} #Portuguese trading post
+1600.1.1 = { trade_goods = slaves } #Trade good change
+1637.8.29 = {
+	controller = NED
+	owner = NED
+	add_core = NED
+	remove_core = POR
+	capital = "Fort Coenraadsburg" 
+} 

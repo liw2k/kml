@@ -1,0 +1,16 @@
+#4057 - Nyatura
+
+culture = takama
+religion = shamanism #Fetishism
+trade_goods = iron
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 1
+add_core = KRW
+owner = KRW
+controller = KRW
+is_city = yes
+
+discovered_by = central_african
+capital = "Nyatura"

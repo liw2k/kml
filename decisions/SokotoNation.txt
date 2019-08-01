@@ -1,0 +1,79 @@
+country_decisions = {
+
+	sokoto_nation = {
+		major = yes
+		potential = {
+			OR = {
+			technology_group = east_african
+			technology_group = central_african
+			technology_group = sub_saharan
+			}
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_sokoto_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = { exists = SOK }
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+			religion_group = muslim
+		}
+		provinces_to_highlight = {
+			OR = { 
+				province_id = 1132
+				province_id = 1124
+				province_id = 1133
+				province_id = 2288
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			adm_tech = 10
+			religion_group = muslim
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			OR = {
+				piety = 0.5
+				has_idea_group = religious_ideas
+			}
+			owns_core_province = 1132
+			owns_core_province = 1124
+			owns_core_province = 1133
+			owns_core_province = 2288
+		}
+		effect = {
+			add_prestige = 25
+			add_piety = 0.25
+			change_tag = SOK
+			if = {
+				limit = {
+					NOT = { government = monarchy }
+				}
+				change_government = monarchy
+			}
+			add_government_reform = feudal_theocracy
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = { NOT = { government_rank = 3 } }
+				set_government_rank = 3
+			}
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = formed_sokoto_flag
+		}
+		ai_importance = 400 #The countries that qualify will hate the holder of Sokoto.
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

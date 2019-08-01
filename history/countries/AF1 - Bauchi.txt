@@ -1,0 +1,22 @@
+government = republic
+add_government_reform = merchants_reform
+government_rank = 1
+primary_culture = aka
+religion = shamanism #Fetishism
+technology_group = sub_saharan
+unlock_cult = yemoja_cult
+unlock_cult = roog_cult
+unlock_cult = nyame_cult
+capital = 1139
+religious_school = maliki_school
+
+1444.1.1 = {
+	monarch = {
+		name = "'Ali"
+		dynasty = "Zalil"
+		birth_date = 1410.1.1
+		adm = 2
+		dip = 5
+		mil = 2
+	}
+}

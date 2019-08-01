@@ -1,0 +1,19 @@
+government = monarchy
+add_government_reform = autocracy_reform
+government_rank = 3
+technology_group = chinese
+religion = confucianism
+primary_culture = chihan
+capital = 1836
+
+1444.1.1 = {
+	monarch = {
+	
+		name = "Yu"
+		dynasty = "Zhou"
+		birth_date = 1427.1.1
+		adm = 5
+		dip = 4
+		mil = 4
+	}
+}

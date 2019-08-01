@@ -1,0 +1,22 @@
+government = tribal
+add_government_reform = tribal_kingdom
+government_rank = 1
+primary_culture = sawabantu
+religion = shamanism #Fetishism
+technology_group = sub_saharan
+unlock_cult = yemoja_cult
+unlock_cult = roog_cult
+unlock_cult = nyame_cult
+capital = 1163
+religious_school = maliki_school
+
+1444.1.1 = {
+	monarch = {
+		name = "'Abd"
+		dynasty = "Al-Rahman"
+		birth_date = 1425.1.1
+		adm = 1
+		dip = 1
+		mil = 3
+	}
+}

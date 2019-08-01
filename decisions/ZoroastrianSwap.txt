@@ -1,0 +1,113 @@
+country_decisions = {
+
+	zoroastrian_conversion = {
+		major = yes
+		
+		potential = {
+			NOT = { has_country_flag = zoroastrian_converted }
+			is_free_or_tributary_trigger = yes
+			culture_group = iranian
+			capital_scope = { 
+				region = persia_region
+			}
+			religion_group = muslim
+			NOT = { government = steppe_horde }
+		}
+		
+		allow = {
+			stability = 0
+			is_at_war = no
+		}
+		
+		effect = {
+			add_years_of_income = -1
+			add_stability = -2
+			change_religion = zoroastrian
+			change_government = despotic_monarchy
+			add_country_modifier = {
+				name = "zoroastrianism_embraced"
+				duration = 7300
+			}
+			set_country_flag = zoroastrian_converted
+		}
+		
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 0
+				OR = {
+					tag = PER
+					exists = PER
+				}
+			}
+			modifier = {
+				factor = 4
+				exists = SAS
+			}
+			modifier = {
+				factor = 2
+				stability = 1
+				years_of_income = 0.5
+			}
+			modifier = {
+				factor = 0
+				num_of_cities = 10
+			}
+		}
+	}
+
+	zoroastrian_conversion_again = {
+		major = yes
+		
+		potential = {
+			has_country_flag = zoroastrian_converted
+			is_free_or_tributary_trigger = yes
+			culture_group = iranian
+			capital_scope = { 
+				region = persia_region
+			}
+			religion_group = muslim
+			NOT = { government = steppe_horde }
+		}
+		
+		allow = {
+			stability = 0
+			is_at_war = no
+		}
+		
+		effect = {
+			add_years_of_income = -1
+			add_stability = -1
+			change_religion = zoroastrian
+			change_government = despotic_monarchy
+			add_country_modifier = {
+				name = "zoroastrianism_restored"
+				duration = 3650
+			}
+		}
+		
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 0
+				OR = {
+					tag = PER
+					exists = PER
+				}
+			}
+			modifier = {
+				factor = 4
+				exists = SAS
+			}
+			modifier = {
+				factor = 2
+				stability = 1
+				years_of_income = 0.5
+			}
+			modifier = {
+				factor = 0
+				num_of_cities = 10
+			}
+		}
+	}
+}

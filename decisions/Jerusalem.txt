@@ -1,0 +1,133 @@
+country_decisions = {
+
+	kingdom_of_jerusalem = {
+		major = yes
+		potential = {
+			NOT = { has_country_flag = formed_jerusalem }
+			NOT = { exists = KOJ }
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			religion = catholic
+			NOT = { government = republic }
+			NOT = { has_reform = celestial_empire }
+			OR = {
+				owns = 379
+				AND = {
+					ai = no
+					tag = KNI
+				}
+				AND = {
+					ai = no
+					tag = CYP
+				}
+				AND = {
+					ai = no
+					tag = PRO
+				}
+				government = theocracy
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 364 #Gazzah
+				province_id = 379 #Jerusalem
+				province_id = 1854 #Jaffa
+				province_id = 380
+				province_id = 381
+				province_id = 2327
+				province_id = 364
+				province_id = 379
+				province_id = 1854
+				province_id = 378
+				province_id = 1855
+				province_id = 4268
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			owns_core_province = 364 #Gazzah
+			owns_core_province = 379 #Jerusalem
+			owns_core_province = 1854 #Jaffa
+			owns_core_province = 380
+			owns_core_province = 381
+			owns_core_province = 2327
+			owns_core_province = 364
+			owns_core_province = 379
+			owns_core_province = 1854
+			owns_core_province = 378 #County of Tripoli
+			owns_core_province = 1855 #Sayda
+			owns_core_province = 4268 #Aqaba
+			379 = {
+				is_state = yes
+			}
+		}
+		effect = {
+			add_prestige = 25
+			if = {
+				limit = { tag = PAP }
+				PAP = { set_papacy_active = no }
+			}
+			if = {
+				limit = {
+					OR = {
+						tag = KNI
+						tag = CYP
+						tag = PRO
+						OR = {
+							government = theocracy
+							religion = catholic
+						}
+					}
+				}
+				change_tag = KOJ
+				if = {
+					limit = { has_custom_ideas = no }
+					country_event = { id = ideagroups.1 } #Swap Ideas
+				}
+			}
+			if = {
+				limit = { tag = KNI }
+				set_country_flag = knights_formed_jerusalem
+			}
+			KOJ = {
+				set_capital = 379 #Jerusalem
+				change_religion = catholic
+				if = {
+					limit = {
+						NOT = { government = monarchy }
+					}
+					change_government = monarchy
+					set_legacy_government = feudal_monarchy
+				}
+				if = {
+					limit = {
+						NOT = { government_rank = 2 }
+					}
+					set_government_rank = 2
+				}
+				if = {
+					limit = {
+						has_country_flag = crusader_pope
+						NOT = { is_year = 1600 }
+					}
+					add_country_modifier = {
+						name = "crusading_pope"
+						duration = 10950
+					}
+				}
+				set_country_flag = formed_jerusalem
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+}

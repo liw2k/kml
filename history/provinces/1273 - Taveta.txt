@@ -1,0 +1,19 @@
+#1273 - Taveta
+
+culture = bantu #thagiicu
+religion = shamanism #Fetishism
+trade_goods = iron
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 1
+add_core = MBA
+owner = MBA
+controller = MBA
+is_city = yes
+capital = "Taveta"
+discovered_by = central_african
+discovered_by = east_african
+
+1593.1.1 = { discovered_by = POR }
+1710.1.1 = { discovered_by = OMA }

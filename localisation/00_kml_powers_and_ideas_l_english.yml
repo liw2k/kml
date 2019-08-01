@@ -1,0 +1,28 @@
+﻿l_english:
+ mercantilist_ideas:0 "Mercantilist Ideas"
+ mercantilist_ideas_bonus:0 "Full Mercantilist"
+ serfdom:0 "Professional Ranching"
+ serfdom_desc:0 "We keep in employment the veteran horse trainers of our nation to the point that they are efficient and streamlined.."
+ trade_ideas:0 "Global Trade Ideas"
+ trade_ideas_bonus:0 "Full Global Trade Focus"
+ organised_construction:0 "Economies of War"
+ organised_construction_desc:0 "The efficient taxation structre in the nation can be expanded when at war to support the war effort."
+ debt_and_loans_desc:0 "Debt is sometimes simply unavoidable, however, an organized debt market will allow us to float loans at a lower interest rate."
+ excellent_shipwrights:0 "Blockade Runners"
+ excellent_shipwrights_desc:0 "The sailors in fleets are so fast that they can do the Sound Run in under 4 hours; This is obviously quite usefull in times of war."
+ resilient_state:0 "Enlightened State"
+ resilient_state_desc:0 "Our government is the very pinnacle of Enlightenment and wisdom and this spreads out through the local magistrates in the provinces across our nation."
+ postal_service_desc:0 "Our postmen always deliver the wonderful news of our monarchy, granting us legitimacy at home and abroad."
+ kml_sheltered_ports:0 "Springboard Ports"
+ kml_sheltered_ports_desc:0 "The ports are now expanded to allow for colonial needs of the nation, allowing for further expansion abroad."
+ 
+ #inno ideas
+ pragmatism:0 "Planning a Siege"
+ pragmatism_desc:0 "The superior militarist strikes while schemes are being laid. The next best is to attack alliances. The next best is to attack the army. The lowest is to attack a city. Siege of a city is only done as a last resort. Take three months to prepare your machines and three months to complete your siege engineering. If the general cannot overcome his anger and has his army swarm over the citadel, killing a third of his soldiers, and yet the citadel is still not taken, this is a disastrous attack."
+ 
+ #eco ideas
+ kml_costeffective:0 "Cost-effective Production"
+ kml_costeffective_desc:0 "By min-maxing the production of army and navy equipment we can save quite a substantial of money."
+ nationalistic_enthusiasm:0 "Centralization"
+ nationalistic_enthusiasm_desc:0 "If we centralize the state then we will find it easier to advance the idea and agenda of the center over the regions."
+ 

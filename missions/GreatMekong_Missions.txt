@@ -1,0 +1,184 @@
+gmk_missions_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {	
+		tag = GMK
+	}
+	has_country_shield = yes
+	
+	internal_harmony_mission = { 
+		icon = mission_buddhist_monk_praying
+		required_missions = {  }
+		position = 1
+		trigger = {
+			num_accepted_cultures = 4
+			temple = 10
+		}
+		effect = {
+			add_country_modifier = {
+				name = "internal_harmony"
+				duration = -1
+			}
+			malaya_area = { 
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			malacca_area = { 
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+	begone_pirates_mission = { 
+		icon = mission_asian_trader
+		required_missions = { internal_harmony_mission }
+		position = 2
+        provinces_to_highlight = {
+			OR = {
+				area = malaya_area
+				area = malacca_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+        }
+		trigger = {
+			malaya_area = {
+				type = all
+				owned_by = ROOT
+			}
+			malacca_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "secured_trade_interests"
+				duration = 7300
+			}
+			upper_burma_area = { 
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			lower_burma_area = { 
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			central_burma_area = { 
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+	jungles_of_burma_mission = { 
+		icon = mission_impaled_soldies
+		required_missions = { begone_pirates_mission }
+		position = 3
+        provinces_to_highlight = {
+			OR = {
+				area = upper_burma_area
+				area = central_burma_area
+				area = lower_burma_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+        }
+		trigger = {
+			upper_burma_area = {
+				type = all
+				owned_by = ROOT
+			}
+			lower_burma_area = {
+				type = all
+				owned_by = ROOT
+			}
+			central_burma_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			add_dip_power = 100
+			guangdong_area = { 
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			west_guangdong_area = { 
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+	riches_of_china_mission = { 
+		icon = mission_cannons_firing
+		required_missions = { jungles_of_burma_mission }
+		position = 4
+        provinces_to_highlight = {
+			OR = {
+				area = guangdong_area
+				area = west_guangdong_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+        }
+		trigger = {
+			guangdong_area = {
+				type = all
+				owned_by = ROOT
+			}
+			west_guangdong_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "basically_chinese_genocide"
+				duration = 9125
+			}
+		}
+	}
+	
+	emperor_of_china_mission = { 
+		icon = mission_empire
+		required_missions = { riches_of_china_mission }
+		position = 5
+		trigger = {
+			is_emperor_of_china = yes
+		}
+		effect = {
+			add_country_modifier = {
+				name = "mekong_emperor_of_china"
+				duration = 9125
+			}
+		}
+	}
+}

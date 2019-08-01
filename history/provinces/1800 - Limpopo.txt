@@ -1,0 +1,16 @@
+#1800 - Limpopo
+
+culture = nguni
+religion = shamanism #Fetishism
+capital = "Gaza"
+trade_goods = gems
+hre = no
+base_tax = 1
+base_production = 1
+base_manpower = 1
+add_core = AF4
+owner = AF4
+controller = AF4
+is_city = yes
+discovered_by = east_african
+discovered_by = central_african

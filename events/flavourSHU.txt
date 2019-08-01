@@ -1,0 +1,37 @@
+namespace = flavor_shu
+normal_or_historical_nations = yes
+
+
+
+country_event = {
+	id = flavor_shu.2
+	title = "flavor_mng.EVTNAME4"
+	desc = "flavor_mng.EVTDESC4"
+	picture = IMPORTANT_STATUE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = SHU
+		is_year = 1500
+		NOT = { is_year = 1550 }
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+	option = {
+		name = "flavor_mng.EVTOPTA4"
+		every_owned_province = {
+			limit = {
+				continent = asia
+				trade_goods = chinaware
+			}
+			add_province_modifier = {
+				name = perfected_porcelain
+				duration = -1				
+			}
+		}
+	}
+}
