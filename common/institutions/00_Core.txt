@@ -94,6 +94,9 @@ feudalism = {
 				technology_group = sub_saharan 
 			}
 			owner = {
+				technology_group = nomad_group
+			}
+			owner = {
 				AND = {
 					government = tribal
 					OR = {
