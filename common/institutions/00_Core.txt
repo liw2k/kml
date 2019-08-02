@@ -107,6 +107,13 @@ feudalism = {
 				}
 			}
 			owner = {
+				OR = {
+					primary_culture = gondi
+					primary_culture = jharkhandi
+					primary_culture = garjati
+				}
+			}
+			owner = {
 				NOT = {
 					government = tribal
 					government = native
