@@ -1,0 +1,223 @@
+mongolia_missions_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = KHA
+			tag = MGE
+		}
+	}
+	has_country_shield = yes
+
+	conquest_of_mongolia_mission = {
+		icon = mission_chinese_general_riding
+		required_missions = { }
+		position = 1
+		provinces_to_highlight = {
+			OR = {
+				province_id = 723
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			723 = { #Xilin gol
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_years_of_income = 2
+			add_country_modifier = {
+				name = conquest_mongolia
+				duration = 5475
+			}
+			add_country_modifier = {
+				name = "conquest_mongol"
+				duration = 0
+
+			}
+			mongolia_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+				}
+				add_core = ROOT
+			}
+		}
+	}
+
+	conquest_of_northern_china_mission = {
+		icon = 
+		required_missions = { conquest_of_mongolia_mission }
+		position = 2
+		provinces_to_highlight = {
+			OR = {
+				province_id = 693
+				province_id = 2181
+				province_id = 697
+				province_id = 1816
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			AND = {
+			693 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			2181 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			697 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			1816 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "conquest_of_northern_china_mission_1"
+				duration = 5475
+			}
+			add_country_modifier = {
+				name = "conquest_of_northern_china_mission_2"
+				duration = 0
+			}
+		}
+		}
+	conquest_of_manchuria_mission = {
+		icon = 
+		required_missions = { conquest_of_northern_china_mission }
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				province_id = 730
+				province_id = 2108
+				province_id = 2109
+				province_id = 2105
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			AND = {
+			730 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			2108 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			2109 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			2105 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "manchu_horses"
+				duration = 0
+			}
+			718 = {
+				add_province_modifier = {
+					name = "steal_manchurian_wealth"
+					duration = 0
+				}
+			}
+			4222 = {
+				add_province_modifier = {
+					name = "steal_manchurian_wealth"
+					duration = 0
+				}
+				change_trade_goods = paper
+			}
+			716 = {
+				add_province_modifier = {
+					name = "steal_manchurian_wealth"
+					duration = 0
+				}
+				change_trade_goods = ivory
+			}
+			719 = {
+				add_province_modifier = {
+					name = "steal_manchurian_wealth"
+					duration = 0
+				}
+				change_trade_goods = gold
+			}
+			2189 = {
+				add_province_modifier = {
+					name = "steal_manchurian_wealth"
+					duration = 0
+				}
+				change_trade_goods = silk
+			}
+		}
+	}
+	invasion_of_uzbek_mission = {
+		icon = 
+		required_missions = { conquest_of_manchuria_mission }
+		position = 4
+		provinces_to_highlight = {
+			province_id = 476
+		}
+		trigger = {
+			476 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "uzbeck_horses"
+				duration = 0
+			}
+			add_country_modifier = {
+				name = "uzbeck_recovery"
+				duration = 5475
+			}
+			west_siberia = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			central_asia = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			}
+		}
+	prelude_to_the_great_khanate_mission = {
+		icon = 
+		required_missions = { invasion_of_uzbek_mission }
+		position = 5
+		trigger = {
+			AND ={
+			num_of_cavalry = 60
+			num_of_owned_provinces_with = {
+				value = 100
+				is_overseas = no
+			}
+			}
+		}
+		effect = {
+		add_country_modifier = {
+			name = "rise_of_mongol_empire"
+			duration = 0
+		}
+		}
+	}
+	}
+	}
+}
