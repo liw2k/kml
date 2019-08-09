@@ -1,8 +1,8 @@
 #4196 - Haizhou
 
-owner = CAO
-controller = CAO
-add_core = CAO
+owner = XIP
+controller = XIP
+add_core = XIP
 culture = jianghuai
 religion = confucianism
 capital = "Haizhou"

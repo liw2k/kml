@@ -657,7 +657,7 @@ FAN_ideas = {                                           # KML
 NMS_ideas = {                                 # KML
 	start = {
 		recover_army_morale_speed = 0.15
-		production_efficiency = 0.05
+		production_efficiency = 0.1
 	}
 	
 	bonus = {
@@ -670,7 +670,7 @@ NMS_ideas = {                                 # KML
 	free = yes		#will be added at load.
 
 	nms_one = {
-		inflation_reduction = 0.05
+		inflation_reduction = 0.1
 	}
 	nms_two = {
 		tolerance_own = 1
@@ -943,7 +943,7 @@ SHU_ideas = {                                         # KML
 		}
 	bonus = {
 		leader_siege = 1
-		discipline = 0.025
+		land_leader_manuever = 1
 	}
 	
 	trigger = {
@@ -967,8 +967,7 @@ SHU_ideas = {                                         # KML
 		diplomatic_upkeep = 1
 	}
 	SHU_chi_ko_nu = {
-		leader_land_fire = 1
-		fire_damage = 0.1
+		leader_land_fire = 2
 	}
 	SHU_han_traditions = {
 		legitimacy = 1
@@ -976,7 +975,7 @@ SHU_ideas = {                                         # KML
 		diplomatic_annexation_cost = -0.20
 	}
 	SHU_people = {
-		land_morale = 0.10
+		land_morale = 0.15
 	}
 }
 
@@ -987,7 +986,6 @@ WUU_ideas = {                                            # KML
 	}
 
     bonus = {
-        global_trade_goods_size_modifier = 0.1
 		artillery_power = 0.10
     }
 
@@ -1002,8 +1000,7 @@ WUU_ideas = {                                            # KML
     }
 
     sanic = {
-        leader_land_manuever = 1
-        movement_speed = 0.05
+        movement_speed = 0.1
     }
 
     wuu_mount_koya = {
@@ -1021,7 +1018,7 @@ WUU_ideas = {                                            # KML
     }
 
     snw_six = {
-		artillery_cost = -0.1
+		fire_damage_received = -0.1
 		artillery_bonus_vs_fort = 1
     }
 
@@ -1061,7 +1058,7 @@ WEI_ideas = {                                                # KML
 		manpower_recovery_speed = 0.10
 	}
 	wei5 = {
-		infantry_power = 0.1
+		land_attrition = -0.2
 	}
 	wei6 = {
 		legitimacy = 1

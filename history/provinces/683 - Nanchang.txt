@@ -1,8 +1,8 @@
 #683 - Nanchang
 
-owner = FAN
-controller = FAN
-add_core = FAN
+owner = CSW
+controller = CSW
+add_core = CSW
 culture = gan
 religion = confucianism
 capital = "Nanchang"
