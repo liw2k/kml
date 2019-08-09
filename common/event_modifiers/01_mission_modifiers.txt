@@ -2654,7 +2654,7 @@ uzbeck_recovery = {
 }
 
 rise_of_mongol_empire = {
-	ae_impact = 0.5
+	ae_impact = 1000
 	cavalry_power = 0.2
 	army_tradition = 1
 	land_morale = 0.1
