@@ -46,7 +46,7 @@
  attack_by_fire_mission_desc:0 "In order to follow our wise ancestors teachings, we must first have the weapons to do so."
  looking_east_mission_title:0 "Looking East"
  looking_east_mission_desc:0 "Those to our East hold on to much of the trade which is rightfully ours (grants claims on the CoT in Nippon node)"
- 
+
  #Ming Missions
  rebuild_army_mission_title:0 "Rebuilding the Army"
  rebuild_army_mission_desc:0 "Any growing country must maintain a reasonably sized army. By expanding our forces we can both further our political interests abroad and stimulate our domestic economy."
@@ -74,7 +74,7 @@
  new_homeland_mission_desc:0 "Our long journey means we have searched long and hard for a new home, perhaps we have finally found it."
  rectifying_a_mistake_mission_title:0 "Rectifying a Mistake"
  rectifying_a_mistake_mission_desc:0 "We were wrong about that continent and it shall not be spoken of. Lets try again."
- 
+
  #Qing Missions
  eight_banners_mission_title:0 "The Eight Banners"
  eight_banners_mission_desc:0 "To effectively combat the Chinese we must organize our Armies into a new more efficient fighting system."
@@ -94,7 +94,7 @@
  reconquer_north_yuan_mission_desc:0 "The northern hordes have long been indepedant since the fall of the Yuan dynasty. We must reconquer the lands of Mongolia to assimilate the steppe hordes under the Qing banner."
  reconquer_old_frontier_mission_title:0 "Reconquer the Old Frontier"
  reconquer_old_frontier_mission_desc:0 "The old frontiers used to guard the ancient empires of the Tang dynasty and many more. If we are to guard our people, these old lands must be retaken to form a buffer."
- 
+
  #Great Mekong Missions
  internal_harmony_mission_title:0 "Internal Harmony"
  internal_harmony_mission_desc:0 "Before we look further afield, we must first be at peace at home."
@@ -106,3 +106,69 @@
  riches_of_china_mission_desc:0 "The provinces in China seem more Mekong than Chinese."
  emperor_of_china_mission_title:0 "The Emperors New Clothes"
  emperor_of_china_mission_desc:0 "It is time China came under new management."
+
+ # ============== #
+ # Mossi Missions #
+ # ============== #
+prepare_for_conquest_title:0 "Prepare for Conquest"
+prepare_for_conquest_desc:0 "We must raise our troops to deal with our encroaching neighbors!"
+
+consolidate_mossi_lands_title:0 "Consolidate the Mossi Lands"
+consolidate_mossi_lands_desc:0 "We have an army, now to back it up with our land!"
+
+strike_mali_title:0 "Strike the Mali"
+strike_mali_desc:0 "That's our land!"
+
+destroy_mali_empire_title:0 "Destroy the Mali Empire"
+destroy_mali_empire_desc:0 "You call that an empire?"
+
+creation_of_mossi_empire_title:0 "Creation of the Mossi Empire"
+creation_of_mossi_empire_desc:0 "As we strip away our Tribal ways, we embrace the ways of an empire."
+
+free_people_jenne_title:0 "Free the people of Jenne"
+free_people_jenne_desc:0 "What a mighty fine capital you have there..."
+
+strike_songhai_title:0 "Strike the Songhai"
+strike_songhai_desc:0 "Mind if we take this?"
+
+riches_of_katsina_title:0 "Riches of Katsina"
+riches_of_katsina_desc:0 "It's just a minor tax, I swear!"
+
+crush_petty_princes_title:0 "Crush the Petty Princes"
+crush_petty_princes_desc:0 "We must not be held back by these barbaric princes."
+
+ruler_of_mossi_title:0 "Ruler of the Mossi"
+ruler_of_mossi_desc:0 "Our new ruler has gloriously stabilized the southern lands."
+
+integrate_the_songhai_title:0 "Integrate the Songhai"
+integrate_the_songhai_desc:0 "One of us! One of us!"
+
+capital_for_king_title:0 "Capital fit for a King"
+capital_for_king_desc:0 "Aaaah, comfy."
+
+the_great_reform_title:0 "The Great Reform"
+the_great_reform_desc:0 "We have decided our religious fate."
+
+timbuktu_trade_title:0 "Timbuktu Trade"
+timbuktu_trade_desc:0 "We must monopolize the Timbuktu trade region."
+
+mines_of_mali_title:0 "Mines of Mali"
+mines_of_mali_desc:0 "Do you like my necklace? It's pure gold."
+
+mossi_ascendancy_title:0 "Mossi Ascendancy"
+mossi_ascendancy_desc:0 "All must bow before the thiccccccc Mossi Empire!"
+
+the_kings_treasury_title:0 "The King's Treasury"
+the_kings_treasury_desc:0 "We need an army to protect our treasury."
+
+feed_the_population_title:0 "Feed the Population"
+feed_the_population_desc:0 "Insert hungry African joke here."
+
+wealth_of_jenne_title:0 "Wealth of Jenne"
+wealth_of_jenne_desc:0 "This shall be the capital of all of West Africa."
+
+coastal_trade_title:0 "Coastal Trade"
+coastal_trade_desc:0 "What is this water you speak of? There is no such thing!"
+
+wealth_of_katsina_title:0 "Wealth of Katsina"
+wealth_of_katsina_desc:0 "This is mine now."

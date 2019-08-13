@@ -1,4 +1,5 @@
 ﻿l_english:
+ glorious_victory_modifier:0 "Glorious Victory!"
  conquered_wei_pretenders:0 "Conquered Wei Pretenders"
  great_wall_of_china_repaired:0 "Repaired Great Wall of China"
  chinese_cheaper_army_maint:0 "Encouraged Mass Recruitment"
@@ -40,3 +41,23 @@
  secured_trade_interests:0 "Secured Trade Interests"
  basically_chinese_genocide:0 "Basically Chinese Genocide"
  mekong_emperor_of_china:0 "Emperor of China"
+
+  # ======================= #
+  # Mossi Mission Modifiers #
+  # ======================= #
+
+msi_destroyed_mali:0 "Destroyed Mali"
+msi_empire:0 "Mossi Empire"
+msi_conversion:0 "Mossi Conversion"
+msi_songhai_soldiers:0 "Songhai Soldiers"
+msi_ascendant:0 "Mossi Ascendance"
+msi_reform:0 "Mossi Reformation"
+msi_opposition:0 "Mossi Opposition"
+msi_colonial_expansion:0 "Mossi Colonial Expansion"
+msi_coastal_growth:0 "Coastal Growth"
+msi_katsina_riches:0 "Riches of Katsina"
+msi_full_treasury:0 "Full Treasury"
+msi_population_boom:0 "Population Boom"
+msi_capital_of_wa:0 "Capital of Western Africa"
+msi_timbuktu_trade_modifier:0 "Trade in Timbuktu"
+msi_mines:0 "Mines of Mali"
