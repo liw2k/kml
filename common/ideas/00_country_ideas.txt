@@ -13341,13 +13341,14 @@ HIN_ideas = {
 		infantry_power = 0.15
 	}
 	hin_persianate_court = {
-		advisor_cost = -0.1
+		advisor_cost = -0.2
 	}
 	hin_indian_empire = {
-		years_of_nationalism = -5
+		manpower_recovery_speed = 0.2
 	}
 	hin_peacock_throne = {
 		legitimacy = 1
+		land_morale = 0.1
 	}
 	hin_gunpowder_empire = {
 		fire_damage = 0.1
