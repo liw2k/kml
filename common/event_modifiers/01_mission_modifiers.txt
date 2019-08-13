@@ -2403,8 +2403,8 @@ mastered_cannonmaking = {
 chinese_traders_in_japan = {
 	light_ship_power = 0.15
 	merchants = 1
-}	
-	
+}
+
 # Ming Mission Modifiers
 
 foothold_gained = {
@@ -2420,7 +2420,7 @@ the_last_ming = {
 	core_creation = -0.20
 }
 
-ming_legacy = { 
+ming_legacy = {
 	max_states = 5
 }
 
@@ -2636,16 +2636,16 @@ manchu_horses = {
 	cavalry_cost = -0.025
 	global_missionary_strength = 0.03
 }
-		
+
 steal_manchurian_wealth = {
 	trade_goods_size_modifier = 0.1
 	trade_value = 1
 	trade_goods_size = 0.5
 }
-				
+
 uzbeck_horses = {
-	cavalry_cost = -0.025 
-	cavalry_power = 0.05 
+	cavalry_cost = -0.025
+	cavalry_power = 0.05
 }
 
 uzbeck_recovery = {
@@ -2654,7 +2654,7 @@ uzbeck_recovery = {
 }
 
 rise_of_mongol_empire = {
-	ae_impact = 1000
+	ae_impact = 0.5
 	cavalry_power = 0.2
 	army_tradition = 1
 	land_morale = 0.1
@@ -2663,3 +2663,12 @@ rise_of_mongol_empire = {
 	manpower_recovery_speed = 0.2
 	horde_unity = 1.0
 }
+
+# =================================== #
+# Recreated Glorious Victory Modifier #
+# =================================== #
+
+	glorious_victory_modifier = {
+		manpower_recovery_speed = .1
+		prestige = 1
+	}
