@@ -172,3 +172,48 @@ coastal_trade_desc:0 "What is this water you speak of? There is no such thing!"
 
 wealth_of_katsina_title:0 "Wealth of Katsina"
 wealth_of_katsina_desc:0 "This is mine now."
+
+ # ============== #
+ # Kongo Missions #
+ # ============== #
+kon_military_prep_title:0 "Military Prep"
+kon_military_prep_desc:0 "SANTIAGO!"
+
+kon_consolidate_kongo_title:0 "Consolidate Kongo"
+kon_consolidate_kongo_desc:0 "I'm sure you don't mind me taking this, right?"
+
+kon_take_south_title:0 "Take the South"
+kon_take_south_desc:0 "How about a little more?"
+
+kon_proclaim_empire_title:0 "Proclaim Empire"
+kon_proclaim_empire_desc:0 "Don't mind me over here."
+
+kon_expand_east_title:0 "Eastern Expansion"
+kon_expand_east_desc:0 "Ooh, what's over here?"
+
+kon_further_east_title:0 "Further East"
+kon_further_east_desc:0 "There's water over here too?"
+
+kon_treasury_title:0 "Kongo's Treasury"
+kon_treasury_desc:0 "It's Ditto Time."
+
+kon_slaves_title:0 "Kongolese Slaves"
+kon_slaves_desc:0 "Alright everyone, 40 acres and a mule this way!"
+
+kon_ca_trade_title:0 "Kongo Trade"
+kon_ca_trade_desc:0 "This is our trade node. See? Our names match."
+
+kon_integrate_conquests_title:0 "Integrate our Conquests"
+kon_integrate_conquests_desc:0 "Your'e part of us now."
+
+kon_kazembe_mines_title:0 "Kazembe Mines"
+kon_kazembe_mines_desc:0 "Everything that glitters is not gold."
+
+kon_loyal_subjects_title:0 "Loyal Subjects"
+kon_loyal_subjects_desc:0 "Behave!"
+
+kon_integrate_subjects_title:0 "Integrate our Subjects"
+kon_integrate_subjects_desc:0 "You're being rescued! Do not resist."
+
+kon_centralization_title:0 "Centralize the Kongo"
+kon_centralization_desc:0 "Looking pretty good over here, how're things with you?"
