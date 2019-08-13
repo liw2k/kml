@@ -20,9 +20,11 @@ conquest_1 = {
   prepare_for_conquest = {
     generic = no  # Not generic mission
     position = 1  # Row 1
-
+    required_missions = { }
+    provinces_to_highlight = { }
+    icon = mission_african_soldier
     trigger = {
-      OR = {
+      AND = {
         stability = 1
         army_size_percentage = 1
         num_of_cavalry = 4
