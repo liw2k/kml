@@ -1157,6 +1157,12 @@ persia={
 	}
 	inland=yes
 	outgoing={
+		name="astrakhan"
+		path={
+			1326 464
+		}
+	}
+	outgoing={
 		name="aleppo"
 		path={
 			1326 421 2202 2205 418 407 377 
