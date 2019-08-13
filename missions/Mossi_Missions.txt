@@ -1,0 +1,899 @@
+# ================= #
+# Written by Vulcan #
+# ================= #
+
+# $$$$$$$$$$$$$ #
+# Conquest Tree #
+# $$$$$$$$$$$$$ #
+
+conquest_1 = {
+  slot = 1  # Column 1
+  generic = no
+  ai = yes
+  has_country_shield = yes
+  potential = { tag = MSI } # If MSI (Mossi's tag)
+
+    # ======================= #
+    # 1: Prepare for Conquest #
+    # ======================= #
+
+  prepare_for_conquest = {
+    generic = no  # Not generic mission
+    position = 1  # Row 1
+
+    trigger = {
+      OR = {
+        stability = 1
+        army_size_percentage = 1
+        num_of_cavalry = 4
+      }
+    }
+
+    effect = {
+      lower_volta_area = { add_permanent_claim = ROOT }
+      jenne_area = { add_permanent_claim = ROOT }
+      atacora_oueme_area = { add_permanent_claim = ROOT }
+    }
+  }
+
+  # ========================== #
+  # 2: Consolidate Mossi Lands #
+  # ========================== #
+
+  consolidate_mossi_lands = {
+    generic = no
+    position = 2 # Row 2
+    required_missions = { prepare_for_conquest }
+    provinces_to_highlight = {
+      OR = {
+        area = lower_volta_area
+        area = atacora_oueme_area
+      }
+      NOT = { owned_by = ROOT }
+    }
+
+    trigger = {
+      AND = {
+        lower_volta_area = {
+          type = all
+          owned_by = ROOT
+        }
+        atacora_oueme_area = {
+          type = all
+          owned_by = ROOT
+        }
+      }
+    }
+
+    effect = {
+      add_adm_power = 100
+      change_government_reform_progress = 100
+      kong_area = { add_permanent_claim = ROOT }
+      massina_area = { add_permanent_claim = ROOT }
+    }
+  }
+
+  # ================== #
+  # 3: Strike the Mali #
+  # ================== #
+
+  strike_mali = {
+    generic = no
+    position = 3
+    required_missions = { consolidate_mossi_lands }
+    provinces_to_highlight = {
+      OR = {
+        area = kong_area
+        area = massina_area
+      }
+      NOT = { owned_by = ROOT }
+    }
+
+    trigger = {
+      AND = {
+        kong_area = {
+          type = all
+          owned_by = ROOT
+        }
+        massina_area = {
+          type = all
+          owned_by = ROOT
+        }
+      }
+    }
+
+    effect = {
+      add_country_modifier = {
+        name = glorious_victory_modifier
+        duration = -1
+      }
+      manding_area = { add_permanent_claim = ROOT }
+      baghena_area = { add_permanent_claim = ROOT }
+      futa_jallon_area = { add_permanent_claim = ROOT }
+    }
+  }
+
+  # ========================== #
+  # 4: Destroy the Mali Empire #
+  # ========================== #
+  destroy_mali_empire = {
+    generic = no
+    position = 4
+    required_missions = { strike_mali }
+    provinces_to_highlight = {
+      OR = {
+        area = manding_area
+        area = baghena_area
+        area = futa_jallon_area
+      }
+      NOT = { owned_by = ROOT }
+    }
+
+    trigger = {
+      AND = {
+        manding_area = {
+          type = all
+          owned_by = ROOT
+        }
+        baghena_area = {
+          type = all
+          owned_by = ROOT
+        }
+        futa_jallon_area = {
+          type = all
+          owned_by = ROOT
+        }
+      }
+    }
+
+    effect = {
+      add_country_modifier = {
+        name = msi_destroyed_mali
+        duration = -1
+      }
+    }
+  }
+
+  # ============================ #
+  # Creation of the Mossi Empire #
+  # ============================= #
+
+  creation_of_mossi_empire = {
+    generic = no
+    position = 5
+    required_missions = {
+      destroy_mali_empire
+      riches_of_katsina
+    }
+
+    trigger = {
+      AND = {
+        prestige = 50
+        NOT = { government = tribal }
+      }
+    }
+
+    effect = {
+      set_government_rank = 3
+      add_country_modifier = {
+        name = msi_empire
+        duration = -1
+      }
+      sahel_area = { add_permanent_claim = ROOT }
+      niger_area = { add_permanent_claim = ROOT }
+      guinea_area = { add_permanent_claim = ROOT }
+    }
+  }
+}
+
+conquest_2 = { # Column 2 of conquest
+  slot = 2
+  generic = no
+  ai = yes
+  has_country_shield = yes
+  potential = { tag = MSI } # If MSI (Mossi's tag)
+
+
+  # =========================== #
+  # 2: Free the People of Jenne #
+  # =========================== #
+
+  free_people_jenne = {
+    generic = no
+    position = 2
+    required_missions = { prepare_for_conquest }
+    provinces_to_highlight = {
+      province_id = 1134
+      NOT = { owned_by = ROOT }
+    }
+
+    trigger = { 1134 = { owned_by = ROOT } }
+
+    effect = {
+      1134 = {
+        add_base_tax = 1
+        add_base_production = 1
+        add_base_manpower = 1
+        change_culture = mossi
+        move_capital_effect = yes
+      }
+      add_prestige = 10
+      dendi_area = { add_permanent_claim = ROOT }
+      niger_bend_area = { add_permanent_claim = ROOT }
+    }
+  }
+
+  # ==================== #
+  # 3: Strike at Songhai #
+  # ==================== #
+  strike_songhai = {
+    generic = no
+    position = 3
+    required_missions = { free_people_jenne }
+    provinces_to_highlight = {
+      OR = {
+        area = dendi_area
+        area = niger_bend_area
+      }
+      NOT = { owned_by = ROOT }
+    }
+
+    trigger = {
+      AND = {
+        dendi_area = {
+          type = all
+          owned_by = ROOT
+        }
+        niger_bend_area = {
+          type = all
+          owned_by = ROOT
+        }
+      }
+    }
+
+    effect = {
+      add_prestige = 10
+      add_manpower = 5
+      1133 = { # Gao
+        add_base_tax = -1
+        add_base_production = -1
+        add_base_manpower = -1
+      }
+      1134 = { # Jenne
+      add_base_tax = 1
+      add_base_production = 1
+      add_base_manpower = 1
+      }
+      zazzau_area = { add_permanent_claim = ROOT }
+      katsina_area = { add_permanent_claim = ROOT }
+    }
+  }
+
+  # ==================== #
+  # 4: Riches of Katsina #
+  # ==================== #
+
+  riches_of_katsina = {
+    generic = no
+    position = 4
+    required_missions = { strike_songhai }
+    provinces_to_highlight = {
+      OR = {
+        area = zazzau_area
+        area = katsina_area
+      }
+      NOT = { owned_by = ROOT }
+    }
+
+    trigger = {
+      AND = {
+        zazzau_area = {
+          type = all
+          owned_by = ROOT
+        }
+        katsina_area = {
+          type = all
+          owned_by = ROOT
+        }
+      }
+    }
+
+    effect = {
+      add_treasury = 200
+      add_prestige = 10
+    }
+  }
+}
+
+  # $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ #
+  # Column 2: Conversion and Reform #
+  # $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ #
+
+conversion_and_reform_1 = {
+  slot = 3
+  generic = no
+  ai = yes
+  has_country_shield = yes
+  potential = { tag = MSI }
+
+  # ========================== #
+  # 1: Crush the Petty Princes #
+  # ========================== #
+
+  crush_petty_princes = {
+    generic = no
+    position = 1
+    required_missions = { }
+
+    trigger = {
+      AND = {
+        estate_loyalty = {
+          estate = estate_nobles
+          loyalty = 40
+        }
+        NOT = {
+          estate_territory = {
+            estate = estate_nobles
+            territory = 30
+          }
+        }
+        estate_loyalty = {
+          estate = estate_church
+          loyalty = 40
+        }
+      }
+    }
+
+    effect = {
+      change_government_reform_progress = 50
+      kill_ruler = yes
+      define_ruler = {
+        dynasty = ROOT
+        culture = ROOT
+        religion = ROOT
+        adm = 4
+        dip = 3
+        mil = 3
+        fixed = yes
+        claim = 100
+      }
+      add_ruler_personality = just_personality
+    }
+  }
+
+  # ===================== #
+  # 2: Ruler of the Mossi #
+  # ===================== #
+
+  ruler_of_mossi = {
+    generic = no
+    position = 2
+    required_missions = { crush_petty_princes }
+    provinces_to_highlight = {
+      OR = {
+        area = lower_volta_area
+        area = atacora_oueme_area
+      }
+      NOT = {
+        NOT = { local_autonomy = 25 }
+        NOT = { unrest = 0 }
+      }
+    }
+
+    trigger = {
+      AND = {
+        lower_volta_area = {
+          type = all
+          NOT = { local_autonomy = 25 }
+          NOT = { unrest = 0 }
+        }
+        atacora_oueme_area = {
+          type = all
+          NOT = { local_autonomy = 25 }
+          NOT = { unrest = 0 }
+        }
+      }
+    }
+
+    effect = {
+      add_mil_power = 100
+      lower_volta_area = {
+        type = all
+        add_base_manpower = 1
+      }
+      atacora_oueme_area = {
+        type = all
+        add_base_manpower = 1
+      }
+      add_country_modifier = {
+        name = msi_conversion
+        duration = 9125
+      }
+    }
+  }
+
+  # ======================== #
+  # 3: Integrate the Songhai #
+  # ======================== #
+
+  integrate_the_songhai = {
+    generic = no
+    position = 3
+    required_missions = { ruler_of_mossi }
+    provinces_to_highlight = {
+      OR = {
+        area = dendi_area
+        area = niger_area
+      }
+      NOT = { religion = shamanism }
+    }
+
+    trigger = {
+      AND = {
+        dendi_area = {
+          type = all
+          religion = shamanism
+        }
+        niger_bend_area = {
+          type = all
+          religion = shamanism
+        }
+        accepted_culture = songhai
+      }
+    }
+
+    effect = {
+      add_country_modifier = {
+        name = msi_songhai_soldiers
+        duration = -1
+      }
+      dendi_area = {
+        type = all
+        add_base_manpower = 1
+      }
+      niger_bend_area = {
+        type = all
+        add_base_manpower = 1
+      }
+    }
+  }
+}
+
+conversion_and_reform_2 = {
+  slot = 4
+  generic = no
+  ai = yes
+  has_country_shield = yes
+  potential = { tag = MSI }
+
+
+  # ===================== #
+  # 2: Capital for a King #
+  # ===================== #
+
+  capital_for_king = {
+    generic = no
+    position = 2
+    required_missions = { crush_petty_princes }
+    provinces_to_highlight = {
+      province_id = 1134
+      NOT = {
+        province_has_center_of_trade_level = 2
+        development = 20
+        NOT = { unrest = 0 }
+        fort_level = 2
+      }
+    }
+
+    trigger = {
+      1134 = {
+        AND = {
+          province_has_center_of_trade_level = 2
+          development = 20
+          NOT = { unrest = 0 }
+          fort_level = 2
+        }
+      }
+    }
+
+    effect = {
+      change_government_reform_progress = 100
+      add_country_modifier = {
+        name = centralization_modifier
+        duration = -1
+      }
+    }
+  }
+
+  # =================== #
+  # 3: The Great Reform #
+  # =================== #
+
+  the_great_reform = {
+    generic = no
+    position = 3
+    required_missions = { capital_for_king }
+    provinces_to_highlight = {
+      province_id = 1134
+      NOT = {
+        owned_by = ROOT
+        religion = shamanism
+      }
+    }
+
+    trigger = {
+      AND = {
+        1134 = {
+          AND = {
+            owned_by = ROOT
+            religion = shamanism
+          }
+        }
+        OR = {
+          has_reform = lip_service_reform
+          has_reform = religious_societies_reform
+        }
+      }
+    }
+
+    effect = {
+      # Embrace Feudalism - uh, they start with it...
+      add_country_modifier = {
+        name = msi_reform
+        duration = -1
+      }
+      add_country_modifier = {
+        name = msi_opposition
+        duration = 9125
+      }
+    }
+  }
+
+  # 8888888888888888 #
+  # Moved for UI fix #
+  # 8888888888888888 #
+
+  # ===================== #
+  # 4: The Timbuktu Trade #
+  # ===================== #
+
+  timbuktu_trade = {
+    generic = no
+    position = 4
+    required_missions = { wealth_of_jenne }
+    provinces_to_highlight = {
+      OR = {
+        province_id = 1132
+        province_id = 1133
+      }
+      NOT = {
+        OR = {
+          has_building = marketplace
+          has_building = trade_depot
+          has_building = stock_exchange
+        }
+        development = 20
+        province_has_center_of_trade_level = 2
+        }
+    }
+    trigger = {
+      AND = {
+        1132 = { # Timbuktu
+          AND = {
+            OR = {
+              has_building = marketplace
+              has_building = trade_depot
+              has_building = stock_exchange
+            }
+            development = 20
+            province_has_center_of_trade_level = 2
+          }
+        }
+        1133 = { # Goa
+          AND = {
+            OR = {
+              has_building = marketplace
+              has_building = trade_depot
+              has_building = stock_exchange
+            }
+            development = 20
+            province_has_center_of_trade_level = 2
+          }
+        }
+        is_strongest_trade_power = timbuktu
+      }
+    }
+
+    effect = {
+      1132 = {
+        add_province_modifier = {
+          name = msi_timbuktu_trade_modifier
+          duration = -1
+        }
+      }
+      1133 = {
+        add_province_modifier = {
+          name = msi_timbuktu_trade_modifier
+          duration = -1
+        }
+      }
+      1134 = {
+        add_province_modifier = {
+          name = msi_timbuktu_trade_modifier
+          duration = -1
+        }
+      }
+      add_treasury = 200
+    }
+  }
+
+  # ================ #
+  # 5: Mines of Mali #
+  # ================ #
+
+  mines_of_mali = {
+    generic = no
+    position = 5
+    required_missions = { timbuktu_trade }
+    provinces_to_highlight = {
+      OR = {
+        province_id = 1121
+        province_id = 1120
+      }
+      NOT = {
+        NOT = { local_autonomy = 0 }
+        development = 15
+      }
+    }
+    trigger = {
+      AND = {
+        1121 = { # Bure
+          AND = {
+            NOT = { local_autonomy = 0 }
+            development = 15
+          }
+        }
+        1120 = { # Bambuk
+          AND = {
+            NOT = { local_autonomy = 0 }
+            development = 15
+          }
+        }
+      }
+    }
+
+    effect = {
+      add_country_modifier = {
+        name = msi_mines
+        duration = -1
+      }
+      1121 = { add_base_production = 2 }
+      1120 = { add_base_production = 2 }
+      add_treasury = 200
+    }
+  }
+
+  # =================== #
+  # 6: Mossi Ascendancy #
+  # =================== #
+
+  mossi_ascendancy = {
+    generic = no
+    position = 6
+    required_missions = {
+      wealth_of_katsina
+      mines_of_mali
+      creation_of_mossi_empire
+    }
+    trigger = {
+      AND = {
+        monthly_income = 150
+        land_forcelimit = 150
+        total_development = 800
+      }
+    }
+
+    effect = {
+      add_country_modifier = {
+        name = msi_ascendant
+        duration = -1
+      }
+    }
+  }
+}
+
+  # $$$$$$$$$$$$$$$$$ #
+  # Column 3: Economy #
+  # $$$$$$$$$$$$$$$$$ #
+
+msi_economy_1 = {
+  slot = 5
+  generic = no
+  ai = yes
+  has_country_shield = yes
+  potential = { tag = MSI }
+
+  # ====================== #
+  # 1: The King's Treasury #
+  # ====================== #
+
+  the_kings_treasury = {
+    generic = no
+    position = 1
+    required_missions = { }
+
+    trigger = {
+      AND = {
+        monthly_income = 4 # monthly_income condition takes an integer, cannot use 3.5
+        treasury = 100
+      }
+    }
+
+    effect = {
+      add_country_modifier = {
+        name = msi_full_treasury
+        duration = 9125
+      }
+      add_mil_power = 50
+    }
+  }
+
+  # ====================== #
+  # 2: Feed the Population #
+  # ====================== #
+
+  feed_the_population = {
+    generic = no
+    position = 2
+    required_missions = { the_kings_treasury }
+    provinces_to_highlight = {
+      AND = {
+        trade_goods = livestock
+        has_discovered = ROOT
+      }
+    }
+    trigger = {
+      num_of_owned_provinces_with = {
+        value = 10
+        trade_goods = livestock
+      }
+    }
+
+    effect = {
+      add_country_modifier = {
+        name = msi_population_boom
+        duration = 9125
+      }
+    }
+  }
+
+  # ================== #
+  # 3: Wealth of Jenne #
+  # ================== #
+
+  wealth_of_jenne = {
+    generic = no
+    position = 3
+    required_missions = { feed_the_population }
+    provinces_to_highlight = {
+      province_id = 1134
+      NOT = {
+        province_has_center_of_trade_level = 2
+        development = 20
+        OR = { # Bug prevention method: Doc says just marketplace, but could cause issue if not taken until down the line.
+          has_building = marketplace
+          has_building = trade_depot
+          has_building = stock_exchange
+        }
+      }
+    }
+    trigger = {
+      1134 = {
+        AND = {
+          province_has_center_of_trade_level = 2
+          development = 20
+          OR = { # Bug prevention method: Doc says just marketplace, but could cause issue if not taken until down the line.
+            has_building = marketplace
+            has_building = trade_depot
+            has_building = stock_exchange
+          }
+        }
+      }
+    }
+      effect = {
+        1134 = {
+          add_province_modifier = {
+            name = msi_capital_of_wa
+            duration = 25
+          }
+        }
+        add_trade_modifier = {
+          who = ROOT
+          duration = -1
+          power = 20
+        }
+      }
+    }
+
+    # ================ #
+    # 4: Coastal Trade #
+    # ================ #
+
+    coastal_trade = {
+      generic = no
+      position = 4
+      required_missions = { wealth_of_jenne }
+      provinces_to_highlight = {
+        OR = {
+          province_id = 1126
+          province_id = 2258
+          province_id = 1147
+        }
+      }
+      trigger = {
+        AND = {
+          1126 = { owned_by = ROOT } # Ivory Coast
+          2258 = { owned_by = ROOT } # Cape Coast
+          1147 = { owned_by = ROOT } # Benin
+          num_of_light_ship = 10
+        }
+      }
+
+      effect = {
+        add_country_modifier = {
+          name = msi_colonial_expansion
+          duration = 9125
+        }
+        west_africa_coast_area = {
+          add_province_modifier = {
+            name = msi_coastal_growth
+            duration = 9125
+          }
+        }
+        benin_area = {
+          name = msi_coastal_growth
+          duration = 9125
+        }
+      }
+    }
+
+    # ==================== #
+    # 5: Wealth of Katsina #
+    # ==================== #
+
+    wealth_of_katsina = {
+      generic = no
+      position = 5
+      required_missions = { coastal_trade }
+      provinces_to_highlight = {
+        area = katsina_area
+        NOT = {
+          development = 10
+          owned_by = ROOT
+          devastation = 0
+        }
+      }
+      trigger = {
+        AND = {
+          katsina_area = {
+            type = all
+            development = 10
+            owned_by = ROOT
+            devastation = 0
+          }
+        }
+      }
+
+      effect = {
+        add_treasury = 250
+        katsina_area = {
+          type = all
+          add_province_modifier = {
+            name = msi_katsina_riches
+            duration = -1
+          }
+        }
+      }
+    }
+  }
+}
