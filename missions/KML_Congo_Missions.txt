@@ -557,13 +557,37 @@ kon_missions_5 = {
 		position = 3
 		
 		trigger = {
-			estate_influence = {
+			AND = {
 				NOT = {
-					influence = 65
+					estate_influence = {
+						estate = estate_nobles
+						influence = 30
+					}
 				}
-			}
-			estate_loyalty = {
-				loyalty = 50
+				estate_loyalty = {
+					estate = estate_nobles
+					loyalty = 50
+				}
+				NOT = {
+					estate_influence = {
+						estate = estate_church
+						influence = 30
+					}
+				}
+				estate_loyalty = {
+					estate = estate_church
+					loyalty = 50
+				}
+				NOT = {
+					estate_influence = {
+						estate = estate_burghers
+						influence = 30
+					}
+				}
+				estate_loyalty = {
+					estate = estate_burghers
+					loyalty = 50
+				}
 			}
 			NOT = {
 				num_of_rebel_armies = 1
