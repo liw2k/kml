@@ -846,7 +846,7 @@ msi_economy_1 = {
           name = msi_colonial_expansion
           duration = 9125
         }
-        west_africa_coast_area = {
+        west_african_coast_area = {
           add_province_modifier = {
             name = msi_coastal_growth
             duration = 9125
