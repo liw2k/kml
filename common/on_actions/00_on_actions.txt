@@ -3127,9 +3127,9 @@ on_leader_recruited = {
 }
 
 # country
-#on_general_recruited = {
-#	add_army_professionalism = 0.005
-#}
+on_general_recruited = {
+	add_army_professionalism = 0
+}
 
 # country
 on_admiral_recruited = {
