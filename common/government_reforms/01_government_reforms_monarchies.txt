@@ -645,7 +645,7 @@ mughal_government = {
 	legacy_equivalent = feudal_monarchy
 
 	modifiers = {
-		tolerance_own = 1
+		tolerance_own = 2
 		max_states = 3
 	}
 
@@ -1103,7 +1103,7 @@ mansabdari_reform = {
 		NOT = { map_setup = map_setup_random }
 	}
 	modifiers = {
-		army_tradition_decay = -0.003
+		army_tradition_decay = -0.01
 		max_states = 3
 	}
 }
