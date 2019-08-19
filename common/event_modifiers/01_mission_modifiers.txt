@@ -2668,10 +2668,10 @@ rise_of_mongol_empire = {
 # Recreated Glorious Victory Modifier #
 # =================================== #
 
-	glorious_victory_modifier = {
-		manpower_recovery_speed = .1
-		prestige = 1
-	}
+#glorious_victory_modifier = {
+#	manpower_recovery_speed = 0.1
+#	prestige = 1
+#}
 
 
 # ====================== #
@@ -2679,11 +2679,11 @@ rise_of_mongol_empire = {
 # ====================== #
 
 mal_control_mossi_mod = {
-	cavalry_power = .1
+	cavalry_power = 0.1
 }
 
 mal_subjugate_songhai_mod = {
-	cavalry_power = .15
+	cavalry_power = 0.15
 }
 
 mal_empire_mod = {
@@ -2695,15 +2695,15 @@ mal_fetish_problem_mod = {
 }
 
 mal_dev_coast_mod = {
-	trade_goods_size_modifier = .5
+	trade_goods_size_modifier = 0.5
 }
 
 mal_mines_mod = {
-	inflation_reduction = .1
+	inflation_reduction = 0.1
 }
 
 mal_knowledge_of_jenne = {
-	idea_cost = -.1
+	idea_cost = -0.1
 }
 
 mal_timbuktu_trade_mod = {
@@ -2711,11 +2711,11 @@ mal_timbuktu_trade_mod = {
 }
 
 mal_coastal_trade_mod = {
-	range = .3
+	range = 0.3
 }
 
 mal_ivory_coast_mod = {
-	development_cost = .1
+	development_cost = 0.1
 }
 
 mal_col_amb_mod = {
@@ -2723,10 +2723,10 @@ mal_col_amb_mod = {
 }
 
 mal_slave_amb_mod = {
-	trade_goods_size_modifier = .25
+	trade_goods_size_modifier = 0.25
 }
 
 mal_ascendant_mod = {
 	land_morale = .1
-	land_maintenance_modifier = -.1
+	land_maintenance_modifier = -0.1
 }
