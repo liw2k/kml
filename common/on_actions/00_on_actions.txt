@@ -3127,15 +3127,9 @@ on_leader_recruited = {
 }
 
 # country
-<<<<<<< HEAD
 on_general_recruited = {
 	add_army_professionalism = 0
 }
-=======
-#on_general_recruited = {
-#	add_army_professionalism = 0.005
-#}
->>>>>>> fff8424b9833c0efdff1e4d1b0874db5e8688496
 
 # country
 on_admiral_recruited = {
