@@ -1397,11 +1397,11 @@ RUS_ideas = {
 SPA_ideas = {
 	start = {
 		land_morale = 0.15
-		artillery_fire = 1
 	}
 	
 	bonus = {
 		discipline = 0.05
+		artillery_fire = 1
 	}
 	
 	trigger = {
