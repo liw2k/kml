@@ -2,12 +2,8 @@
 # Written by Vulcan #
 # ================= #
 
-# $$$$$$$$$$$$$ #
-# Conquest Tree #
-# $$$$$$$$$$$$$ #
-
-conquest_1 = {
-  slot = 1  # Column 1
+msi_1 = {
+  slot = 1
   generic = no
   ai = yes
   has_country_shield = yes
@@ -30,7 +26,6 @@ conquest_1 = {
         num_of_cavalry = 4
       }
     }
-
     effect = {
       lower_volta_area = { add_permanent_claim = ROOT }
       jenne_area = { add_permanent_claim = ROOT }
@@ -53,7 +48,7 @@ conquest_1 = {
       }
       NOT = { owned_by = ROOT }
     }
-
+    icon = mission_unite_home_region
     trigger = {
       AND = {
         lower_volta_area = {
@@ -66,7 +61,6 @@ conquest_1 = {
         }
       }
     }
-
     effect = {
       add_adm_power = 100
       change_government_reform_progress = 100
@@ -90,7 +84,7 @@ conquest_1 = {
       }
       NOT = { owned_by = ROOT }
     }
-
+    icon = mission_chinese_general_riding
     trigger = {
       AND = {
         kong_area = {
@@ -103,7 +97,6 @@ conquest_1 = {
         }
       }
     }
-
     effect = {
       add_country_modifier = {
         name = glorious_victory_modifier
@@ -118,6 +111,7 @@ conquest_1 = {
   # ========================== #
   # 4: Destroy the Mali Empire #
   # ========================== #
+
   destroy_mali_empire = {
     generic = no
     position = 4
@@ -130,7 +124,7 @@ conquest_1 = {
       }
       NOT = { owned_by = ROOT }
     }
-
+    icon = mission_steppe_warriors
     trigger = {
       AND = {
         manding_area = {
@@ -147,7 +141,6 @@ conquest_1 = {
         }
       }
     }
-
     effect = {
       add_country_modifier = {
         name = msi_destroyed_mali
@@ -167,14 +160,14 @@ conquest_1 = {
       destroy_mali_empire
       riches_of_katsina
     }
-
+    provinces_to_highlight = { }
+    icon = mission_pf_map_table
     trigger = {
       AND = {
         prestige = 50
         NOT = { government = tribal }
       }
     }
-
     effect = {
       set_government_rank = 3
       add_country_modifier = {
@@ -188,13 +181,12 @@ conquest_1 = {
   }
 }
 
-conquest_2 = { # Column 2 of conquest
+msi_2 = {
   slot = 2
   generic = no
   ai = yes
   has_country_shield = yes
   potential = { tag = MSI } # If MSI (Mossi's tag)
-
 
   # =========================== #
   # 2: Free the People of Jenne #
@@ -204,13 +196,9 @@ conquest_2 = { # Column 2 of conquest
     generic = no
     position = 2
     required_missions = { prepare_for_conquest }
-    provinces_to_highlight = {
-      province_id = 1134
-      NOT = { owned_by = ROOT }
-    }
-
+    provinces_to_highlight = { province_id = 1134 }
+    icon = mission_conquer_50_development
     trigger = { 1134 = { owned_by = ROOT } }
-
     effect = {
       1134 = {
         add_base_tax = 1
@@ -228,6 +216,7 @@ conquest_2 = { # Column 2 of conquest
   # ==================== #
   # 3: Strike at Songhai #
   # ==================== #
+
   strike_songhai = {
     generic = no
     position = 3
@@ -239,7 +228,7 @@ conquest_2 = { # Column 2 of conquest
       }
       NOT = { owned_by = ROOT }
     }
-
+    icon = mission_crusade_for_varna
     trigger = {
       AND = {
         dendi_area = {
@@ -252,7 +241,6 @@ conquest_2 = { # Column 2 of conquest
         }
       }
     }
-
     effect = {
       add_prestige = 10
       add_manpower = 5
@@ -286,7 +274,7 @@ conquest_2 = { # Column 2 of conquest
       }
       NOT = { owned_by = ROOT }
     }
-
+    icon = mission_european_church
     trigger = {
       AND = {
         zazzau_area = {
@@ -299,7 +287,6 @@ conquest_2 = { # Column 2 of conquest
         }
       }
     }
-
     effect = {
       add_treasury = 200
       add_prestige = 10
@@ -307,11 +294,7 @@ conquest_2 = { # Column 2 of conquest
   }
 }
 
-  # $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ #
-  # Column 2: Conversion and Reform #
-  # $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ #
-
-conversion_and_reform_1 = {
+msi_3 = {
   slot = 3
   generic = no
   ai = yes
@@ -326,7 +309,8 @@ conversion_and_reform_1 = {
     generic = no
     position = 1
     required_missions = { }
-
+    provinces_to_highlight = { }
+    icon = mission_have_two_subjects
     trigger = {
       AND = {
         estate_loyalty = {
@@ -345,7 +329,6 @@ conversion_and_reform_1 = {
         }
       }
     }
-
     effect = {
       change_government_reform_progress = 50
       kill_ruler = yes
@@ -372,31 +355,34 @@ conversion_and_reform_1 = {
     position = 2
     required_missions = { crush_petty_princes }
     provinces_to_highlight = {
+      LIMIT = {
+        AND = {
+          local_autonomy = 25
+          unrest = 0
+        }
+      }
       OR = {
         area = lower_volta_area
         area = atacora_oueme_area
       }
-      NOT = {
-        NOT = { local_autonomy = 25 }
-        NOT = { unrest = 0 }
-      }
     }
-
+    icon = mission_ottoman_harem
     trigger = {
       AND = {
         lower_volta_area = {
           type = all
+          owned_by = ROOT
           NOT = { local_autonomy = 25 }
           NOT = { unrest = 0 }
         }
         atacora_oueme_area = {
           type = all
+          owned_by = ROOT
           NOT = { local_autonomy = 25 }
           NOT = { unrest = 0 }
         }
       }
     }
-
     effect = {
       add_mil_power = 100
       lower_volta_area = {
@@ -425,11 +411,12 @@ conversion_and_reform_1 = {
     provinces_to_highlight = {
       OR = {
         area = dendi_area
-        area = niger_area
+        area = niger_bend_area
+        type = all
+        LIMIT = { NOT = { religion = shamanism } }
       }
-      NOT = { religion = shamanism }
     }
-
+    icon = mission_early_modern_university
     trigger = {
       AND = {
         dendi_area = {
@@ -443,7 +430,6 @@ conversion_and_reform_1 = {
         accepted_culture = songhai
       }
     }
-
     effect = {
       add_country_modifier = {
         name = msi_songhai_soldiers
@@ -477,16 +463,8 @@ conversion_and_reform_2 = {
     generic = no
     position = 2
     required_missions = { crush_petty_princes }
-    provinces_to_highlight = {
-      province_id = 1134
-      NOT = {
-        province_has_center_of_trade_level = 2
-        development = 20
-        NOT = { unrest = 0 }
-        fort_level = 2
-      }
-    }
-
+    provinces_to_highlight = { province_id = 1134 }
+    icon = mission_arabian_fort
     trigger = {
       1134 = {
         AND = {
@@ -497,7 +475,6 @@ conversion_and_reform_2 = {
         }
       }
     }
-
     effect = {
       change_government_reform_progress = 100
       add_country_modifier = {
@@ -515,14 +492,8 @@ conversion_and_reform_2 = {
     generic = no
     position = 3
     required_missions = { capital_for_king }
-    provinces_to_highlight = {
-      province_id = 1134
-      NOT = {
-        owned_by = ROOT
-        religion = shamanism
-      }
-    }
-
+    provinces_to_highlight = { province_id = 1134 }
+    icon = mission_asian_trader
     trigger = {
       AND = {
         1134 = {
@@ -537,9 +508,7 @@ conversion_and_reform_2 = {
         }
       }
     }
-
     effect = {
-      # Embrace Feudalism - uh, they start with it...
       add_country_modifier = {
         name = msi_reform
         duration = -1
@@ -568,7 +537,7 @@ conversion_and_reform_2 = {
         province_id = 1132
         province_id = 1133
       }
-      NOT = {
+      NOT = { AND = {
         OR = {
           has_building = marketplace
           has_building = trade_depot
@@ -576,8 +545,9 @@ conversion_and_reform_2 = {
         }
         development = 20
         province_has_center_of_trade_level = 2
-        }
-    }
+      }
+    } }
+    icon = mission_market_place_with_asian_traders
     trigger = {
       AND = {
         1132 = { # Timbuktu
@@ -589,6 +559,7 @@ conversion_and_reform_2 = {
             }
             development = 20
             province_has_center_of_trade_level = 2
+            is_strongest_trade_power = ROOT
           }
         }
         1133 = { # Goa
@@ -602,10 +573,8 @@ conversion_and_reform_2 = {
             province_has_center_of_trade_level = 2
           }
         }
-        is_strongest_trade_power = timbuktu
       }
     }
-
     effect = {
       1132 = {
         add_province_modifier = {
@@ -643,27 +612,27 @@ conversion_and_reform_2 = {
         province_id = 1120
       }
       NOT = {
-        NOT = { local_autonomy = 0 }
+        NOT = { local_autonomy = 1 }
         development = 15
       }
     }
+    icon = mission_high_income
     trigger = {
       AND = {
         1121 = { # Bure
           AND = {
-            NOT = { local_autonomy = 0 }
+            NOT = { local_autonomy = 1 }
             development = 15
           }
         }
         1120 = { # Bambuk
           AND = {
-            NOT = { local_autonomy = 0 }
+            NOT = { local_autonomy = 1 }
             development = 15
           }
         }
       }
     }
-
     effect = {
       add_country_modifier = {
         name = msi_mines
@@ -687,6 +656,7 @@ conversion_and_reform_2 = {
       mines_of_mali
       creation_of_mossi_empire
     }
+    icon = mission_monarch_in_throne_room
     trigger = {
       AND = {
         monthly_income = 150
@@ -694,7 +664,6 @@ conversion_and_reform_2 = {
         total_development = 800
       }
     }
-
     effect = {
       add_country_modifier = {
         name = msi_ascendant
@@ -723,14 +692,14 @@ msi_economy_1 = {
     generic = no
     position = 1
     required_missions = { }
-
+    provinces_to_highlight = { }
+    icon = mission_war_chest
     trigger = {
       AND = {
         monthly_income = 4 # monthly_income condition takes an integer, cannot use 3.5
         treasury = 100
       }
     }
-
     effect = {
       add_country_modifier = {
         name = msi_full_treasury
@@ -754,13 +723,13 @@ msi_economy_1 = {
         has_discovered = ROOT
       }
     }
+    icon = mission_rice_field
     trigger = {
       num_of_owned_provinces_with = {
         value = 10
         trade_goods = livestock
       }
     }
-
     effect = {
       add_country_modifier = {
         name = msi_population_boom
@@ -777,18 +746,8 @@ msi_economy_1 = {
     generic = no
     position = 3
     required_missions = { feed_the_population }
-    provinces_to_highlight = {
-      province_id = 1134
-      NOT = {
-        province_has_center_of_trade_level = 2
-        development = 20
-        OR = { # Bug prevention method: Doc says just marketplace, but could cause issue if not taken until down the line.
-          has_building = marketplace
-          has_building = trade_depot
-          has_building = stock_exchange
-        }
-      }
-    }
+    provinces_to_highlight = { province_id = 1134 }
+    icon = mission_pf_cross
     trigger = {
       1134 = {
         AND = {
@@ -808,11 +767,11 @@ msi_economy_1 = {
             name = msi_capital_of_wa
             duration = 25
           }
-        }
-        add_trade_modifier = {
-          who = ROOT
-          duration = -1
-          power = 20
+          add_trade_modifier = {
+            who = ROOT
+            duration = -1
+            power = 20
+          }
         }
       }
     }
@@ -831,7 +790,9 @@ msi_economy_1 = {
           province_id = 2258
           province_id = 1147
         }
+        LIMIT = { NOT = { owned_by = ROOT } }
       }
+      icon = mission_invade_island
       trigger = {
         AND = {
           1126 = { owned_by = ROOT } # Ivory Coast
@@ -840,7 +801,6 @@ msi_economy_1 = {
           num_of_light_ship = 10
         }
       }
-
       effect = {
         add_country_modifier = {
           name = msi_colonial_expansion
@@ -869,12 +829,13 @@ msi_economy_1 = {
       required_missions = { coastal_trade }
       provinces_to_highlight = {
         area = katsina_area
-        NOT = {
+        NOT = { AND = {
           development = 10
           owned_by = ROOT
           devastation = 0
-        }
+        } }
       }
+      icon = mission_noble_council
       trigger = {
         AND = {
           katsina_area = {
@@ -885,7 +846,6 @@ msi_economy_1 = {
           }
         }
       }
-
       effect = {
         add_treasury = 250
         katsina_area = {
