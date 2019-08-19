@@ -2727,6 +2727,6 @@ mal_slave_amb_mod = {
 }
 
 mal_ascendant_mod = {
-	land_morale = .1
+	land_morale = 0.1
 	land_maintenance_modifier = -0.1
 }
