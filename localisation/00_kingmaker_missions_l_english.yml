@@ -217,3 +217,70 @@ kon_integrate_subjects_desc:0 "You're being rescued! Do not resist."
 
 kon_centralization_title:0 "Centralize the Kongo"
 kon_centralization_desc:0 "Looking pretty good over here, how're things with you?"
+
+  # ============= #
+  # Mali Missions #
+  # ============= #
+
+mal_prepare_for_reconquest_title:0 "Prepare for Reconquest"
+mal_prepare_for_reconquest_desc:0 "Make Mali Great Again!"
+
+mal_conquer_kong_title:0 "Conquer the Kong"
+mal_conquer_kong_desc:0 "You're part of us now."
+
+mal_triumph_at_jenne_title:0 "Triumph at Jenne"
+mal_triumph_at_jenne_desc:0 "Such an easy Siege."
+
+mal_control_the_mossi_title:0 "Control the Mossi"
+mal_control_the_mossi_desc:0 "Time to continue East."
+
+mal_conquer_jolof_title:0 "Conquer Jolof"
+mal_conquer_jolof_desc:0 "Do you see that coastline? That's ours."
+
+mal_crush_macina_title:0 "Crush the Macina"
+mal_crush_macina_desc:0 ""
+
+mal_subjugate_songhai_title:0 "Subjugate Songhai"
+mal_subjugate_songhai_desc:0 ""
+
+mal_mali_empire_title:0 "Declare the Mali Empire"
+mal_mali_empire_desc:0 ""
+
+mal_fetishist_problem_title:0 "The Fetishist Problem"
+mal_fetishist_problem_desc:0 ""
+
+mal_rule_the_kong_title:0 "Rule the Kong"
+mal_rule_the_kong_desc:0 ""
+
+mal_integrate_the_macina_title:0 "Integrate the Macina"
+mal_integrate_the_macina_desc:0 ""
+
+mal_conquest_of_gao_title:0 "Conquest of Gao"
+mal_conquest_of_gao_desc:0 ""
+
+mal_ascendant_title:0 "Mali Ascendant"
+mal_ascendant_desc:0 ""
+
+mal_develop_the_coast_title:0 "Develop the Coast"
+mal_develop_the_coast_desc:0 ""
+
+mal_ruler_of_mossi_title:0 "Ruler of Mossi"
+mal_ruler_of_mossi_desc:0 ""
+
+mal_timbuktu_trade_title:0 "Timbuktu Trade"
+mal_timbuktu_trade_desc:0 ""
+
+mal_colonial_ambition_title:0 "Colonial Ambition"
+mal_colonial_ambition_desc:0 ""
+
+mal_mines_title:0 "Mines of Mali"
+mal_mines_desc:0 ""
+
+mal_knowledge_of_jenne_title:0 "Knowledge of Jenne"
+mal_knowledge_of_jenne_desc:0 ""
+
+mal_wealth_of_jenne_title:0 "Wealth of Jenne"
+mal_wealth_of_jenne_desc:0 ""
+
+mal_coastal_trade_title:0 "Coastal Trade"
+mal_coastal_trade_desc:0 ""
