@@ -2672,3 +2672,61 @@ rise_of_mongol_empire = {
 		manpower_recovery_speed = .1
 		prestige = 1
 	}
+
+
+# ====================== #
+# Mali Mission Modifiers #
+# ====================== #
+
+mal_control_mossi_mod = {
+	cavalry_power = .1
+}
+
+mal_subjugate_songhai_mod = {
+	cavalry_power = .15
+}
+
+mal_empire_mod = {
+	legitimacy = 1
+}
+
+mal_fetish_problem_mod = {
+	religious_unity = 25
+}
+
+mal_dev_coast_mod = {
+	trade_goods_size_modifier = .5
+}
+
+mal_mines_mod = {
+	inflation_reduction = .1
+}
+
+mal_knowledge_of_jenne = {
+	idea_cost = -.1
+}
+
+mal_timbuktu_trade_mod = {
+	trade_goods_size = 2
+}
+
+mal_coastal_trade_mod = {
+	range = .3
+}
+
+mal_ivory_coast_mod = {
+	development_cost = .1
+}
+
+mal_col_amb_mod = {
+	global_colonial_growth = 20
+}
+
+mal_slave_amb_mod = {
+	trade_goods_size_modifier = .25
+}
+
+mal_ascendant_mod = {
+	land_morale = .1
+	land_maintenance_modifier = -.1
+}
