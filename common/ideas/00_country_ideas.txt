@@ -1559,7 +1559,7 @@ DAN_ideas = {
 
 FRA_ideas = {                                        # KML
     start = {
-        cavalry_power = 0.10
+        diplomatic_upkeep = 2
         global_manpower_modifier = 0.25
     }
     
@@ -1593,6 +1593,7 @@ FRA_ideas = {                                        # KML
     the_philosophes = {
         technology_cost = -0.05
         idea_cost = -0.05
+        fire_damage = 0.1
     }
     liberty_egalite_fraternity = {
         tolerance_heathen = 2

@@ -580,7 +580,7 @@ age_of_absolutism = {
 				tag = FRA
 			}
 			modifier = {
-				fire_damage = 0.2
+				fire_damage = 0.1
 			}
 			ai_will_do = {
 				factor = 100
