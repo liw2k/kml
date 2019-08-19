@@ -943,7 +943,7 @@ SHU_ideas = {                                         # KML
 		}
 	bonus = {
 		leader_siege = 1
-		land_leader_manuever = 1
+		leader_land_manuever = 1
 	}
 	
 	trigger = {
