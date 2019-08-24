@@ -3,7 +3,7 @@
 # ================= #
 
 mal_1 = {
-  slo1 = 1 # Column 1
+  slot = 1 # Column 1
   generic = no
   ai = yes
   has_country_shield = yes
