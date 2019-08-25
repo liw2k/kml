@@ -888,34 +888,34 @@ expansion_ideas = {
 
 	bonus = {
  		max_states = 5
+ 		state_maintenance_modifier = -0.5
 	}
 
 	additional_colonists = {
 		colonists = 1
-		auto_explore_adjacent_to_colony = yes
 	}
 
 	persuasive_reasoning  = {
-		core_creation = -0.30
-		min_autonomy_in_territories = -0.15
+		core_creation = -0.25
+		years_of_nationalism = -5
 	}
 	
 	faster_colonists = {
-		global_colonial_growth = 20
+		land_forcelimit_modifier = 0.1
+		global_manpower_modifier = 0.1
 	}
 	
 	additional_merchants = {
 		merchants = 1
-		cb_on_overseas = yes
-		cb_on_primitives = yes
 	}
 
 	additional_diplomats = {
 		administrative_efficiency = 0.05
+		global_trade_power = 0.1
 	}
 	
 	organised_recruiting = {
-		manpower_recovery_speed = 0.15
+		global_unrest = -2
 	}
 	
 	competetive_merchants  = {
