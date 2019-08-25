@@ -548,7 +548,7 @@ economic_ideas = {
         global_tax_modifier = 0.10
     }
     organised_construction = {
-        production_efficiency = 0.10
+        trade_goods_size_modifier = 0.075
     }
     national_bank = {
         war_taxes_cost_modifier = -0.5
