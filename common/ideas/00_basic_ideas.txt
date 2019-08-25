@@ -455,7 +455,7 @@ trade_ideas = {
   	}
 	gt_three = {
 		trade_steering = 0.33
-		caravan_power = 0.25
+		naval_tradition = 0.5
 	}
 	gt_four = {
 		trade_range_modifier = 0.50
@@ -466,8 +466,8 @@ trade_ideas = {
 		ship_power_propagation = 0.33
 	}
 	gt_six = {
-		light_ship_cost	= -0.15
-		naval_forcelimit_modifier = 0.25
+		sailor_maintenance_modifer = -0.33
+		light_ship_cost = -0.15
 	}
 	gt_seven = {
 		trade_efficiency = 0.1
