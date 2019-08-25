@@ -264,44 +264,38 @@ spy_ideas = {
 	
 	bonus = {
 		possible_dip_policy = 1
-		yearly_absolutism = 0.2
 	}
 
 	efficient_spies = {
-		spy_offence = 0.5
-		diplomats = 1
+		land_maintenance_modifier = -0.075
 	}	
 	
 	agent_training = {
-		dip_tech_cost_modifier = -0.1
+		diplomats = 1
+		improve_relation_modifier = 0.25
 	}
 
 	vetting = {
-		global_spy_defence = 0.5
-		dip_advisor_cost = -0.15
+		advisor_cost = -0.1
+		can_fabricate_for_vassals = yes
 	}	
 	
 	additional_loyalist_recruitment = {
-		fabricate_claims_cost = -0.50
-		rebel_support_efficiency = 0.50
-		can_fabricate_for_vassals = yes
+		global_spy_defence = 0.25
+		spy_offence = 0.25
 	}
 
 	claim_fabrication = {
-		legitimacy = 1
-		horde_unity = 1
-		devotion = 1
-		meritocracy = 0.5
-		republican_tradition = 0.2
+		global_unrest = -1
+		trade_efficiency = 0.075
 	}
 
 	privateers = {
-		embargo_efficiency = 0.33
-		privateer_efficiency = 0.33
+		unjustified_demands = -0.5
+		dip_tech_cost_modifier = -0.1
 	}
 	audit_checks = {
-		yearly_corruption = -0.1
-		envoy_travel_time = -0.25
+		war_exhaustion = -0.03
 	}
 
 
