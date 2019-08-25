@@ -177,7 +177,8 @@ innovativeness_ideas = {
 	}
 
 	patron_of_art  = {
-		prestige = 1
+		reinforce_cost_modifier = -0.1
+		reinforce_speed = 0.25
 	}
 	dynamic_court = {
 		advisor_cost = -0.20
@@ -187,7 +188,7 @@ innovativeness_ideas = {
 		idea_cost = -0.1
 	}
 	resilient_state = {
-		global_institution_spread = 0.30
+		global_institution_spread = 0.50
 		embracement_cost = -0.15
 	}
 	formalized_officer_corps = {
