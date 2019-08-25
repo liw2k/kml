@@ -341,6 +341,12 @@ on_siege_won_country = {
 }
 
 # country
+# root = winning country
+on_siege_won_country = {
+	add_army_professionalism = 0.001
+}
+
+# country
 # root = losing country, from = location
 on_siege_lost_country = {
 }
