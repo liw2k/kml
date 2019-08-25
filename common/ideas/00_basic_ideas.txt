@@ -1017,36 +1017,34 @@ humanist_ideas = {
 	category = ADM
 
 	bonus = {
-		prestige_decay = -0.01
-		monthly_piety = 0.005
-		technology_cost = -0.05
+		possible_adm_policy = 1
+		adm_advisor_cost = -0.15
 	}
 	humanist_tolerance = {
+		global_unrest = -2
+	}
+	ecumenism = {
 		tolerance_heathen = 3
 		tolerance_heretic = 3
 		religious_unity = 0.35
 	}
-	ecumenism = {
-		ae_impact = -0.25
-		years_of_nationalism = -10
-	}
 	benevolence = {
-		build_cost = -0.1
+		ae_impact = -0.2
+		advisor_cost = -0.1
 	}
 	indirect_rule = {
-		global_unrest = -2
-		reform_progress_growth = 0.2
+		num_accepted_cultures = 3
+		promote_culture_cost = -0.5
 	}
 	local_traditions = {
-		num_accepted_cultures = 5
-		promote_culture_cost = -0.75
+		technology_cost = -0.1
 	}
 	cultural_ties = {
-		global_autonomy = -0.05
-		possible_adm_policy = 1
+		prestige_decay = -0.01
+		global_tax_income = 36
 	}
 	tolerance_idea = {
-		idea_cost = -0.1
+		idea_cost = -0.05
 	}
 
 	ai_will_do = {
