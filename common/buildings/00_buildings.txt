@@ -302,10 +302,10 @@ cathedral = {
 
 
 university = {
-	cost = 400
+	cost = 250
 	time = 12
 	modifier = {
-		local_development_cost = -0.20
+		local_development_cost = -0.10
 		allowed_num_of_buildings = 1
 		local_institution_spread = 0.075
 	}
