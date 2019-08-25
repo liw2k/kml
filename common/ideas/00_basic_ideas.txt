@@ -983,11 +983,11 @@ administrative_ideas = {
 	}
 	nationalistic_enthusiasm = {
 		max_absolutism = 10
-		global_tax_income = 60
+		recover_army_morale_speed = 0.1 
     }
 	benefits_for_mercenaries = {
-        max_states = 5
-		state_maintenance_modifier = -0.33
+		global_tax_income = 60
+		development_cost = -0.05
 	}
 	bookkeeping = {
 		yearly_corruption = -0.1
