@@ -1110,7 +1110,7 @@ professional_army_ideas = {
 		general_cost = -0.2
 	}
 	prof_one = {
-		drill_gain_modifier = 1
+		infantry_cost = -0.1
 		yearly_army_professionalism = 0.005
 	}
 	prof_two = {
@@ -1120,11 +1120,10 @@ professional_army_ideas = {
 		discipline = 0.05
 	}
 	prof_four = {
-		fire_damage_received = -0.075
-		shock_damage_received = -0.075
+		army_tradition = 0.5
 	}
 	prof_five = {
-		land_maintenance_modifier = -0.1
+		infantry_power = 0.075
 	}
 	prof_six = {
 		drill_decay_modifier = -0.5
