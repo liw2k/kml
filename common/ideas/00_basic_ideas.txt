@@ -62,7 +62,7 @@ aristocracy_ideas = {
 
 	bonus = {
 		monarch_military_power = 1
-		possible_mil_policy = 1
+		
 	}
 
 	trigger = {
@@ -78,23 +78,26 @@ aristocracy_ideas = {
 		cavalry_power = 0.20
 	}
 	serfdom = {
-		mil_tech_cost_modifier = -0.1 
+		mil_tech_cost_modifier = -0.1
+		barrage = -0.25
 	}
 	noble_knights = {
-		global_manpower_modifier = 0.33
+		fire_damage_received = -0.075
+		leader_land_fire = 1
 	}
 	noble_officers = {
 		leader_siege = 1
 	}
 	noble_resilience = {
 		army_tradition = 1
+		shock_damage = 0.1
 	}
 	military_traditions = {
 		defensiveness = 0.2
-		war_exhaustion = -0.03
+		war_exhaustion = -0.05
 	}
 	local_nobility = {
-		fire_damage_received = -0.1
+		global_manpower_modifier = 0.25
 	}
 
 	ai_will_do = {
