@@ -1,0 +1,201 @@
+country_decisions = { #yes this idea (and code) was stolen, blame thinsuil. credit to xaimelee.
+	
+	aristocratic_gambit = {
+		potential = {
+            full_idea_group = aristocracy_ideas
+		}
+		allow = {
+            army_professionalism = 0.25
+			
+			NOT = {
+			    has_country_modifier = aristocratic_gambit
+			    calc_true_if = {
+				has_country_modifier = professional_gambit
+				has_country_modifier = offensive_gambit
+				has_country_modifier = defensive_gambit
+				has_country_modifier = quality_gambit
+				has_country_modifier = quantity_gambit
+				amount = 2
+				}
+				has_country_flag = conscription
+			}
+		}
+		effect = {
+            add_army_professionalism = -0.25
+			
+			add_country_modifier = {
+			    name = aristocratic_gambit
+				duration = 3650
+			}
+		}
+		ai_will_do = {
+			factor = 0.1
+		}
+	}
+	
+	professional_gambit = {
+		potential = {
+            full_idea_group = professional_army_ideas
+		}
+		allow = {
+            army_professionalism = 0.25
+			
+			NOT = {
+			    has_country_modifier = professional_gambit
+			    calc_true_if = {
+				has_country_modifier = aristocratic_gambit
+				has_country_modifier = offensive_gambit
+				has_country_modifier = defensive_gambit
+				has_country_modifier = quality_gambit
+				has_country_modifier = quantity_gambit
+				amount = 2
+				}
+				has_country_flag = conscription
+			}
+		}
+		effect = {
+            add_army_professionalism = -0.25
+			
+			add_country_modifier = {
+			    name = professional_gambit
+				duration = 3650
+			}
+		}
+		ai_will_do = {
+			factor = 0.1
+		}
+	}
+	
+	offensive_gambit = {
+		potential = {
+            full_idea_group = offensive_ideas
+		}
+		allow = {
+            army_professionalism = 0.25
+			
+			NOT = {
+			    has_country_modifier = offensive_gambit
+			    calc_true_if = {
+				has_country_modifier = aristocratic_gambit
+				has_country_modifier = professional_gambit
+				has_country_modifier = defensive_gambit
+				has_country_modifier = quality_gambit
+				has_country_modifier = quantity_gambit
+				amount = 2
+				}
+				has_country_flag = conscription
+			}
+		}
+		effect = {
+            add_army_professionalism = -0.25
+			
+			add_country_modifier = {
+			    name = offensive_gambit
+				duration = 3650
+			}
+		}
+		ai_will_do = {
+			factor = 0.1
+		}
+	}
+
+	defensive_gambit = {
+		potential = {
+            full_idea_group = defensive_ideas
+		}
+		allow = {
+            army_professionalism = 0.25
+			
+			NOT = {
+			    has_country_modifier = defensive_gambit
+			    calc_true_if = {
+				has_country_modifier = aristocratic_gambit
+				has_country_modifier = professional_gambit
+				has_country_modifier = offensive_gambit
+				has_country_modifier = quality_gambit
+				has_country_modifier = quantity_gambit
+				amount = 2
+				}
+				has_country_flag = conscription
+			}
+		}
+		effect = {
+            add_army_professionalism = -0.25
+			
+			add_country_modifier = {
+			    name = defensive_gambit
+				duration = 3650
+			}
+		}
+		ai_will_do = {
+			factor = 0.1
+		}
+	}
+
+	quality_gambit = {
+		potential = {
+            full_idea_group = quality_ideas
+		}
+		allow = {
+            army_professionalism = 0.25
+			
+			NOT = {
+			    has_country_modifier = quality_gambit
+			    calc_true_if = {
+				has_country_modifier = aristocratic_gambit
+				has_country_modifier = professional_gambit
+				has_country_modifier = offensive_gambit
+				has_country_modifier = defensive_gambit
+				has_country_modifier = quantity_gambit
+				amount = 2
+				}
+				has_country_flag = conscription
+			}
+		}
+		effect = {
+            add_army_professionalism = -0.25
+			
+			add_country_modifier = {
+			    name = quality_gambit
+				duration = 3650
+			}
+		}
+		ai_will_do = {
+			factor = 0.1
+		}
+	}
+
+	quantity_gambit = {
+		potential = {
+            full_idea_group = quantity_ideas
+		}
+		allow = {
+            army_professionalism = 0.25
+			
+			NOT = {
+			    has_country_modifier = quantity_gambit
+			    calc_true_if = {
+				has_country_modifier = aristocratic_gambit
+				has_country_modifier = professional_gambit
+				has_country_modifier = offensive_gambit
+				has_country_modifier = defensive_gambit
+				has_country_modifier = quality_gambit
+				amount = 2
+				}
+				has_country_flag = conscription
+			}
+		}
+		effect = {
+            add_army_professionalism = -0.25
+			
+			add_country_modifier = {
+			    name = quantity_gambit
+				duration = 3650
+			}
+		}
+		ai_will_do = {
+			factor = 0.1
+		}
+	}
+
+}

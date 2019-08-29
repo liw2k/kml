@@ -10,6 +10,42 @@ crusading_pope = {
 	shock_damage_received = -0.05
 }
 
+aristocratic_gambit = {
+	cavalry_power = 0.15
+	land_maintenance_modifier = -0.1
+	cavalry_shock = 0.2
+}
+
+professional_gambit = {
+	land_morale = 0.1
+	infantry_power = 0.075
+}
+
+offensive_gambit = {
+	shock_damage = 0.125
+	fire_damage = 0.125
+	siege_ability = 0.15
+	land_attrition = -0.25
+}
+
+defensive_gambit = {
+	shock_damage_received = -0.125
+	fire_damage_received = -0.125
+	defensiveness = 0.2
+	hostile_attrition = 1
+}
+
+quality_gambit = {
+	discipline = 0.03
+	backrow_artillery_damage = 0.1
+}
+
+quantity_gambit = {
+	manpower_recovery_speed = 0.2
+	land_forcelimit_modifier = 0.35
+	possible_mercenaries = 0.15
+}
+
 ### Prof ideas modifiers ###
 
 prof_efficient_drilling = {
