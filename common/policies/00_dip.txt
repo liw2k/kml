@@ -62,32 +62,8 @@ prof_trade = {
 		full_idea_group = trade_ideas
 	}
 	
-	reinforce_cost_modifier = -0.25
-	reinforce_speed = 0.25
-	
-	ai_will_do = {
-		factor = 1	
-	}
-}
-
-prof_explo = {
-	monarch_power = DIP
-
-		potential = {
-		has_idea_group = professional_army_ideas
-		has_idea_group = exploration_ideas
-		OR = {
-			full_idea_group = professional_army_ideas
-			full_idea_group = exploration_ideas
-		}	
-	}
-	allow = {
-		full_idea_group = professional_army_ideas
-		full_idea_group = exploration_ideas
-	}
-	
-	global_colonial_growth = 10
-	native_uprising_chance = -0.25
+	naval_tradition_decay = -0.005
+	naval_maintenance_modifier = -0.1
 	
 	ai_will_do = {
 		factor = 1	
@@ -110,7 +86,7 @@ prof_esp = {
 		full_idea_group = spy_ideas
 	}
 	
-	movement_speed = 0.1
+	artillery_cost = -0.15
 	land_attrition = -0.1
 	
 	ai_will_do = {
@@ -118,28 +94,28 @@ prof_esp = {
 	}
 }
 
-prof_dip = {
+diplomatic_defence_act = {
 	monarch_power = DIP
-
-		potential = {
-		has_idea_group = professional_army_ideas
+	potential = {
 		has_idea_group = diplomatic_ideas
+		has_idea_group = defensive_ideas
 		OR = {
-			full_idea_group = professional_army_ideas
 			full_idea_group = diplomatic_ideas
-		}	
-	}
-	allow = {
-		full_idea_group = professional_army_ideas
-		full_idea_group = diplomatic_ideas
+			full_idea_group = defensive_ideas
+		}
 	}
 	
-	improve_relation_modifier = 0.15
-	diplomatic_reputation = 1
+	allow = {
+		full_idea_group = diplomatic_ideas
+		full_idea_group = defensive_ideas
+	}
+
+	defensiveness = 0.15
+	war_exhaustion = -0.03
 	
 	ai_will_do = {
-		factor = 1	
-	}
+		factor = 1		
+	}	
 }
 
 prof_merc = {
@@ -158,7 +134,8 @@ prof_merc = {
 		full_idea_group = mercantilist_ideas
 	}
 	
-	infantry_cost = -0.15
+	galley_power = 0.1
+	trade_efficiency = 0.05
 	
 	ai_will_do = {
 		factor = 1	
@@ -236,33 +213,6 @@ authority_via_charity = {
 	}
 }
 
-the_statute_of_monopolies = {
-
-	monarch_power = DIP
-
-	potential = {
-		has_idea_group = trade_ideas
-		has_idea_group = economic_ideas
-		OR = {
-			full_idea_group = trade_ideas
-			full_idea_group = economic_ideas
-		}
-	}
-	
-	allow = {
-		full_idea_group = trade_ideas
-		full_idea_group = economic_ideas
-	}
-
-	interest = -1.0
-	inflation_reduction = 0.05
-
-
-	ai_will_do = {
-		factor = 1
-	}
-}
-
 
 the_recruiting_act = {
 	monarch_power = DIP
@@ -282,11 +232,114 @@ the_recruiting_act = {
 	}
 	
 	naval_maintenance_modifier = -0.15
-	production_efficiency = 0.05
+	production_efficiency  = 0.05
 	
 	ai_will_do = {
 		factor = 1
 	}	
+}
+
+
+
+local_militias = {
+	monarch_power = DIP
+	
+	potential = {
+		has_idea_group = mercantilist_ideas
+		has_idea_group = defensive_ideas
+		OR = {
+			full_idea_group = mercantilist_ideas
+			full_idea_group = defensive_ideas
+		}
+	}
+	
+	allow = {
+		full_idea_group = mercantilist_ideas
+		full_idea_group = defensive_ideas
+	}	
+	
+	global_prov_trade_power_modifier = 0.20
+	caravan_power = 0.33
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+armed_neutrality_act = {
+	monarch_power = DIP
+	
+	potential = {
+		has_idea_group = defensive_ideas
+		has_idea_group = trade_ideas
+		OR = {
+			full_idea_group = defensive_ideas
+			full_idea_group = trade_ideas
+		}
+	}
+	
+	allow = {
+		full_idea_group = defensive_ideas
+		full_idea_group = trade_ideas
+	}
+	
+	production_efficiency = 0.075
+	embargo_efficiency = 0.25
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+
+anti_smuggling_act = {
+	monarch_power = DIP
+	
+	potential = {
+		has_idea_group = offensive_ideas
+		has_idea_group = trade_ideas
+		OR = {
+			full_idea_group = offensive_ideas
+			full_idea_group = trade_ideas
+		}
+	}
+	
+	allow = {
+		full_idea_group = offensive_ideas
+		full_idea_group = trade_ideas
+	}
+	
+	global_ship_trade_power = 0.25
+	naval_forcelimit_modifier = 0.1
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+unified_army_command = {
+	monarch_power = DIP
+	
+	potential = {
+		has_idea_group = mercantilist_ideas
+		has_idea_group = offensive_ideas
+		OR = {
+			full_idea_group = mercantilist_ideas
+			full_idea_group = offensive_ideas
+		}
+	}
+	
+	allow = {
+		full_idea_group = mercantilist_ideas
+		full_idea_group = offensive_ideas
+	}	
+	
+	global_trade_goods_size_modifier = 0.075
+	embargo_efficiency = 0.25
+	
+	ai_will_do = {
+		factor = 1
+	}
 }
 
 
@@ -316,36 +369,6 @@ convoy_system = {
 		factor = 1
 	}
 }
-
-the_dissolution_act = {
-
-	monarch_power = DIP
-
-	potential = {
-		has_idea_group = diplomatic_ideas
-		has_idea_group = economic_ideas
-		OR = {
-			full_idea_group = diplomatic_ideas
-			full_idea_group = economic_ideas
-		}
-	}
-	
-	allow = {
-		full_idea_group = diplomatic_ideas
-		full_idea_group = economic_ideas
-	}
-	
-	global_tax_modifier = 0.1
-	development_cost = -0.05
-
-	ai_will_do = {
-		factor = 1	
-	}
-}
-
-
-
-
 
 
 the_wooden_wall = {
@@ -377,8 +400,54 @@ the_wooden_wall = {
 
 
 
+colonial_administration_act = {
+	monarch_power = DIP
+	
+	potential = {
+		has_idea_group = administrative_ideas
+		has_idea_group = exploration_ideas
+		OR = {
+			full_idea_group = administrative_ideas
+			full_idea_group = exploration_ideas
+		}	
+	}
+	allow = {
+		full_idea_group = administrative_ideas
+		full_idea_group = exploration_ideas
+	}
+	
+	colonists = 1
+
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
 
 
+vassal_integration_act = {
+	monarch_power = DIP
+	
+	potential = {
+		has_idea_group = mercantilist_ideas
+		has_idea_group = administrative_ideas
+		OR = {
+			full_idea_group = mercantilist_ideas
+			full_idea_group = administrative_ideas
+		}
+	}
+	
+	allow = {
+		full_idea_group = mercantilist_ideas
+		full_idea_group = administrative_ideas
+	}	
+	
+	merchants = 1
+	
+	ai_will_do = {
+		factor = 1	
+	}
+}
 
 
 the_importation_act = {
@@ -404,6 +473,33 @@ the_importation_act = {
 		factor = 1
 	}
 }
+
+
+overseas_dominions = {
+	monarch_power = DIP
+	
+	potential = {
+		has_idea_group = mercantilist_ideas
+		has_idea_group = expansion_ideas
+		OR = {
+			full_idea_group = mercantilist_ideas
+			full_idea_group = expansion_ideas
+		}
+	}
+	
+	allow = {
+		full_idea_group = mercantilist_ideas
+		full_idea_group = expansion_ideas
+	}	
+	
+	center_of_trade_upgrade_cost = -0.2
+	trade_steering = 0.15
+	
+	ai_will_do = {
+		factor = 1			
+	}
+}
+
 
 colonial_expansions = {
 
@@ -451,7 +547,7 @@ beneficial_neglect = {
 	}
 
 	colonist_placement_chance = 0.05
-	range = 0.5
+	global_trade_power = 0.1
 
 
 	ai_will_do = {
@@ -480,7 +576,9 @@ restrictions_for_colonies = {
 
 
 
-	global_missionary_strength = 0.02
+	papal_influence = 1
+	church_power_modifier = 0.5
+	monthly_fervor_increase = 1
 	naval_morale = 0.05
 
 	ai_will_do = {
@@ -538,8 +636,8 @@ diplomatic_cooperation_act = {
 	}
 
 
-	advisor_cost = -0.10
-	global_institution_spread = 0.10
+	advisor_cost = -0.15
+	global_institution_spread = 0.20
 
 
 	ai_will_do = {
@@ -602,6 +700,31 @@ new_naval_tactis = {
 }
 
 
+iron_fist_rule = {
+	monarch_power = DIP
+	
+	potential = {
+		has_idea_group = mercantilist_ideas
+		has_idea_group = aristocracy_ideas
+		OR = {
+			full_idea_group = mercantilist_ideas
+			full_idea_group = aristocracy_ideas
+		}
+	}
+	
+	allow = {
+		full_idea_group = mercantilist_ideas
+		full_idea_group = aristocracy_ideas
+	}	
+	
+	cavalry_cost = -0.2
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+
 trade_connection_policy = {
 	monarch_power = DIP
 	potential = {
@@ -618,7 +741,7 @@ trade_connection_policy = {
 		full_idea_group = trade_ideas
 	}
 
-	global_foreign_trade_power = 0.1
+	global_own_trade_power = 0.2
 	merchants = 1
 
 	ai_will_do = {
@@ -626,28 +749,6 @@ trade_connection_policy = {
 	}
 }
 
-nobility_embassy_act = {
-	monarch_power = DIP
-	potential = {
-		has_idea_group = aristocracy_ideas
-		has_idea_group = exploration_ideas
-		OR = {
-			full_idea_group = aristocracy_ideas
-			full_idea_group = exploration_ideas
-		}
-	}
-	
-	allow = {
-		full_idea_group = aristocracy_ideas
-		full_idea_group = exploration_ideas
-	}
-
-	global_manpower_modifier = 0.20
-
-	ai_will_do = {
-		factor = 1
-	}
-}
 
 nobles_in_navy_act = {
 	monarch_power = DIP
@@ -668,32 +769,6 @@ nobles_in_navy_act = {
 	galley_cost = -0.10
 	galley_power = 0.10
 	navy_tradition = 1
-
-	ai_will_do = {
-		factor = 1
-	}
-}
-
-
-
-naval_secrecy_act = {
-	monarch_power = DIP
-	potential = {
-		has_idea_group = exploration_ideas
-		has_idea_group = defensive_ideas
-		OR = {
-			full_idea_group = exploration_ideas
-			full_idea_group = defensive_ideas
-		}
-	}
-	
-	allow = {
-		full_idea_group = exploration_ideas
-		full_idea_group = defensive_ideas
-	}
-
-	global_spy_defence = 0.2
-	land_attrition = -0.10
 
 	ai_will_do = {
 		factor = 1
@@ -777,31 +852,6 @@ production_quota_act = {
 	}
 }
 
-encouragement_of_merchant_navy = {
-	monarch_power = DIP
-	potential = {
-		has_idea_group = trade_ideas
-		has_idea_group = expansion_ideas
-		OR = {
-			full_idea_group = trade_ideas
-			full_idea_group = expansion_ideas
-		}
-	}
-	
-	allow = {
-		full_idea_group = trade_ideas
-		full_idea_group = expansion_ideas
-	}
-	
-	trade_range_modifier = 0.25
-	range = 0.5
- 
-
-	ai_will_do = {
-		factor = 1
-	}
-}
-
 
 
 commercial_embassies = {
@@ -820,7 +870,8 @@ commercial_embassies = {
 		full_idea_group = expansion_ideas
 	}
 	
-	global_trade_power = 0.10
+	global_trade_power = 0.15
+	fort_maintenance_modifier = -0.1
 
 	ai_will_do = {
 		factor = 1	
@@ -853,34 +904,6 @@ trade_kontor_network = {
 	}
 }
 
-
-
-policy_of_neutrality = {
-	monarch_power = DIP
-	potential = {
-		has_idea_group = diplomatic_ideas
-		has_idea_group = plutocracy_ideas
-		OR = {
-			full_idea_group = diplomatic_ideas
-			full_idea_group = plutocracy_ideas
-		}
-	}
-	
-	allow = {
-		full_idea_group = diplomatic_ideas
-		full_idea_group = plutocracy_ideas
-	}
-	
-	global_unrest = -1
-	republican_tradition = 0.2
-	
-
-	ai_will_do = {
-		factor = 1
-	}
-}
-
-
 professional_diplomatic_corps = {
 	monarch_power = DIP
 	potential = {
@@ -897,9 +920,11 @@ professional_diplomatic_corps = {
 		full_idea_group = quality_ideas
 	}
 	
-	diplomatic_reputation = 1
-	global_institution_spread = 0.10
-	envoy_travel_time = -0.25
+	legitimacy = 1
+	devotion = 1
+	horde_unity = 1
+	meritocracy = 0.15
+	power_projection_from_insults = 1
 
 	ai_will_do = {
 		factor = 1
@@ -909,29 +934,31 @@ professional_diplomatic_corps = {
 
 
 
-colonial_companies_act = {
+public_legitimacy = {
 	monarch_power = DIP
+
 	potential = {
-		has_idea_group = exploration_ideas
+		has_idea_group = spy_ideas
 		has_idea_group = plutocracy_ideas
 		OR = {
-			full_idea_group = exploration_ideas
+			full_idea_group = spy_ideas
 			full_idea_group = plutocracy_ideas
 		}
 	}
 	
 	allow = {
-		full_idea_group = exploration_ideas
+		full_idea_group = spy_ideas
 		full_idea_group = plutocracy_ideas
 	}
-	
-	range = 0.20
-	global_colonial_growth = 10
+
+	max_absolutism = 15
+	production_efficiency = 0.1
 
 	ai_will_do = {
-		factor = 1
+		factor = 1	
 	}
 }
+
 
 protected_shipping_lanes = {
 	monarch_power = DIP
@@ -974,7 +1001,8 @@ church_sponsored_guilds = {
 		full_idea_group = trade_ideas
 	}
 	
-	global_ship_cost = -0.1
+	light_ship_power = 0.2
+	global_foreign_trade_power = 0.2
 	
 	ai_will_do = {
 		factor = 1			
@@ -983,6 +1011,58 @@ church_sponsored_guilds = {
 
 }
 
+ 
+the_foreign_support_act = {
+	monarch_power = DIP
+
+
+	potential = {
+		has_idea_group = spy_ideas
+		has_idea_group = economic_ideas
+		OR = {
+			full_idea_group = spy_ideas
+			full_idea_group = economic_ideas
+		}
+	}
+	
+	allow = {
+		full_idea_group = spy_ideas
+		full_idea_group = economic_ideas
+	}
+
+	idea_cost = -0.075
+	global_autonomy = -0.03
+	
+	ai_will_do = {
+		factor = 1
+	}
+} 
+
+enforce_religious_law = {
+	monarch_power = DIP
+
+
+	potential = {
+		has_idea_group = religious_ideas
+		has_idea_group = spy_ideas
+		OR = {
+			full_idea_group = religious_ideas
+			full_idea_group = spy_ideas
+		}
+	}
+	
+	allow = {
+		full_idea_group = religious_ideas
+		full_idea_group = spy_ideas
+	}
+
+	province_warscore_cost = -0.2
+	tolerance_own = 1
+
+	ai_will_do = {
+		factor = 1
+	}
+}
 
 chaplains_of_the_fleet = {
 
@@ -1053,37 +1133,13 @@ multilingual_diplomats = {
 	}	
 	
 	technology_cost = -0.05
-	global_manpower_modifier = 0.10
+	liberty_desire = -0.10
 	
 	ai_will_do = {
 		factor = 1
 	}
 }
 
-native_assimilation_act = {
-	monarch_power = DIP
-	
-	potential = {
-		has_idea_group = humanist_ideas
-		has_idea_group = exploration_ideas
-		OR = {
-			full_idea_group = humanist_ideas
-			full_idea_group = exploration_ideas
-		}
-	}
-	
-	allow = {
-		full_idea_group = humanist_ideas
-		full_idea_group = exploration_ideas
-	}	
-	
-	global_colonial_growth = 15
-	native_uprising_chance = -0.5
-	
-	ai_will_do = {
-		factor = 1
-	}
-}
 
 cultural_understanding = {
 	monarch_power = DIP
@@ -1102,63 +1158,13 @@ cultural_understanding = {
 		full_idea_group = spy_ideas
 	}	
 	
-	rebel_support_efficiency = 0.5
-	global_unrest = -2
+	war_exhaustion = -0.03
+	production_efficiency = 0.1
 	
 	ai_will_do = {
 		factor = 1
 	}
 }
-
-the_foreign_aid_act = {
-	monarch_power = DIP
-	
-	potential = {
-		has_idea_group = humanist_ideas
-		has_idea_group = mercantilist_ideas
-		OR = {
-			full_idea_group = humanist_ideas
-			full_idea_group = mercantilist_ideas
-		}
-	}
-	
-	allow = {
-		full_idea_group = humanist_ideas
-		full_idea_group = mercantilist_ideas
-	}	
-	
-	technology_cost = -0.1
-	
-	ai_will_do = {
-		factor = 1
-	}
-}
-
-cultural_unity = {
-	monarch_power = DIP
-	
-	potential = {
-		has_idea_group = mercantilist_ideas
-		has_idea_group = religious_ideas
-		OR = {
-			full_idea_group = mercantilist_ideas
-			full_idea_group = religious_ideas
-		}
-	}
-	
-	allow = {
-		full_idea_group = mercantilist_ideas
-		full_idea_group = religious_ideas
-	}	
-	
-	global_missionary_strength = 0.01
-	global_trade_goods_size_modifier = 0.05
-	
-	ai_will_do = {
-		factor = 1
-	}
-}
-
 
 fleet_surgeons = {
 	monarch_power = DIP
@@ -1187,6 +1193,33 @@ fleet_surgeons = {
 }
 
 
+
+
+guerilla_warfare = {
+	monarch_power = DIP
+	
+	potential = {
+		has_idea_group = mercantilist_ideas
+		has_idea_group = quantity_ideas
+		OR = {
+			full_idea_group = mercantilist_ideas
+			full_idea_group = quantity_ideas
+		}
+	}
+	
+	allow = {
+		full_idea_group = mercantilist_ideas
+		full_idea_group = quantity_ideas
+	}	
+	
+	global_trade_goods_size_modifier = 0.1
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+
 the_integrated_administration_act = {
 	monarch_power = DIP
 	
@@ -1204,8 +1237,7 @@ the_integrated_administration_act = {
 		full_idea_group = quality_ideas
 	}	
 	
-	trade_efficiency = 0.05
-	global_prov_trade_power_modifier = 0.10
+	infantry_cost = -0.15
 	
 	ai_will_do = {
 		factor = 1			
