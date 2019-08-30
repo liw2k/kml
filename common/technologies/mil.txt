@@ -100,7 +100,7 @@ technology = {
 	year = 1466
 	
 	#Standardised Pikes
-	supply_limit 		= 	1
+	supply_limit 		= 	0.75
 	infantry_shock		= 	0.15
 	cavalry_shock		= 	0.2
 
@@ -258,7 +258,7 @@ technology = {
 	#Spanish Square
 	sprite_level = 2
 	fort_16th = yes
-	supply_limit 		= 	1
+	supply_limit 		= 	0.75
 	military_tactics	=	0.25
 
 	enable = tofongchis_musketeer		
@@ -364,7 +364,7 @@ technology = {
 	year = 1622
 	
 	cavalry_shock		=	1.0
-	supply_limit		= 	1	
+	supply_limit		= 	0.75	
 	
 	enable = maharathan_cavalry		
 	enable = manchu_banner		
@@ -398,7 +398,7 @@ technology = {
 	
 	#Gustavian Infantry
 	military_tactics 	= 	0.25
-	supply_limit		=	1
+	supply_limit		=	0.75
 
 	fort_17th = yes
 
