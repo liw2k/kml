@@ -1117,7 +1117,7 @@ power_projection = {
 	devotion = 0.5
 	horde_unity = 0.5
 	republican_tradition = 0.2
-	yearly_army_professionalism = 0.2
+	yearly_army_professionalism = 0.02
 }
 
 power_projection_25 = {
