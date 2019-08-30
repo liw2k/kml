@@ -2654,7 +2654,7 @@ uzbeck_recovery = {
 }
 
 rise_of_mongol_empire = {
-	ae_impact = 0.5
+	ae_impact = 10
 	cavalry_power = 0.2
 	army_tradition = 1
 	land_morale = 0.1
@@ -2668,11 +2668,11 @@ rise_of_mongol_empire = {
 # Recreated Glorious Victory Modifier #
 # =================================== #
 
-#glorious_victory_modifier = {
-#	manpower_recovery_speed = 0.1
-#	prestige = 1
-#}
-
+# glorious_victory_modifier = {
+	manpower_recovery_speed = 0.1
+	prestige = 1
+}
+#
 
 # ====================== #
 # Mali Mission Modifiers #
