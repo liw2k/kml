@@ -1,21 +1,27 @@
-mongolia_missions_1 = {
+oirat_missions = {
 	slot = 1
 	generic = no
 	ai = yes
 	potential = {
-		OR = {
+	
 			tag = KHA
+			tag = OIR
+			tag = YUA
 			tag = MGE
 		}
 	}
 	has_country_shield = yes
-
-	conquest_of_mongolia_mission = {
-		icon = mission_chinese_general_riding
-		required_missions = { }
-		position = 1
+	invade_mongolia_mission = {
+		icon = mission_build_up_to_force_limit
+		required_missions = {  } #None
+		completed_by = 1478.1.15
 		provinces_to_highlight = {
 			OR = {
+				owned_by = OIR
+				province_id = 723
+				}
+			OR = {
+			    owned_by = KHA
 				province_id = 723
 			}
 			NOT = {
@@ -23,201 +29,330 @@ mongolia_missions_1 = {
 			}
 		}
 		trigger = {
-			723 = { #Xilin gol
-				country_or_non_sovereign_subject_holds = ROOT
+			OR = {
+				owns = 723
 			}
 		}
 		effect = {
-			add_years_of_income = 2
-			add_country_modifier = {
-				name = conquest_mongolia
-				duration = 5475
-			}
-			add_country_modifier = {
-				name = "conquest_mongol"
-				duration = 0
-
-			}
-			mongolia_region = {
+	    add_manpower = 2
+		add_years_of_income = 2.0
+			outer_mongolia_area = {
 				limit = {
-					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
 				}
 				add_core = ROOT
 			}
-		}
+			central_mongolia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_core = ROOT
+			}
+			inner_mongolia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_core = ROOT
+			}
+			altai_sayan_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_core = ROOT
+			}
+			uliastai_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_core = ROOT
+			}
+			north_zungaria = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_core = ROOT
+			}
+			ordos_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_core = ROOT
+			}
+			tannu_uriankhai_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_core = ROOT
+			}
+			add_country_modifier = {
+			name = "conquest_mongolia"    
+	        duration = 5475
+	
 	}
-
-	conquest_of_northern_china_mission = {
-		icon = 
-		required_missions = { conquest_of_mongolia_mission }
-		position = 2
-		provinces_to_highlight = {
-			OR = {
-				province_id = 693
-				province_id = 2181
-				province_id = 697
-				province_id = 1816
-			}
-			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		}
+	        add_country_modifier = {
+	        name = "conquest_mongol"
+	duration = -1
+	}
+	                                }
+									
+	            }
+	
+	
+	invade_northern_china = {
+		icon = mission_have_two_subjects
+		required_missions = { invade_mongolia_mission }
+		completed_by = 1478.1.15
+		
+			
+			
 		trigger = {
-			AND = {
-			693 = {
+			
+			697 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			2181 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			697 = {
+			693 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			1816 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			}
+			
 		}
 		effect = {
 			add_country_modifier = {
-				name = "conquest_of_northern_china_mission_1"
-				duration = 5475
-			}
-			add_country_modifier = {
-				name = "conquest_of_northern_china_mission_2"
-				duration = 0
-			}
+			name = "conquest_of_northern_china_mission_1"    
+	        duration = 5475
+	
+	}
+	        add_country_modifier = {
+	        name = "conquest_of_northern_china_mission_2"
+	duration = -1
+	}
 		}
-		}
-	conquest_of_manchuria_mission = {
-		icon = 
-		required_missions = { conquest_of_northern_china_mission }
-		position = 3
+	}
+	
+	invade_manchuria = {
+		icon = mission_unite_home_region
+		required_missions = { invade_mongolia_mission }
 		provinces_to_highlight = {
 			OR = {
-				province_id = 730
-				province_id = 2108
-				province_id = 2109
-				province_id = 2105
+				province_id = 	730
+				province_id =   2108
+				province_id =   2109
+				province_id = 	2105
+				
 			}
-			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+			
 		}
 		trigger = {
-			AND = {
+			
 			730 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				owned_by = ROOT
 			}
 			2108 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				owned_by = ROOT
 			}
 			2109 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				owned_by = ROOT
 			}
-			2105 = {
-				country_or_non_sovereign_subject_holds = ROOT
+		    2105 = {
+				owned_by = ROOT
 			}
 			}
-		}
+			
 		effect = {
+		
+		
 			add_country_modifier = {
 				name = "manchu_horses"
-				duration = 0
+				duration = -1
 			}
+			
+			
 			718 = {
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 2
 				add_province_modifier = {
-					name = "steal_manchurian_wealth"
-					duration = 0
+				name = "steal_manchurian_wealth"
+				duration = -1
+				
 				}
 			}
-			4222 = {
+			2190 = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
 				add_province_modifier = {
-					name = "steal_manchurian_wealth"
-					duration = 0
+				name = "steal_manchurian_wealth"
+				duration = -1
+				
 				}
-				change_trade_goods = paper
 			}
-			716 = {
-				add_province_modifier = {
-					name = "steal_manchurian_wealth"
-					duration = 0
-				}
-				change_trade_goods = ivory
+            2189 = {
+			change_trade_goods = silk
+                                add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			add_province_modifier = {
+			name = "steal_manchurian_wealth"
+				duration = -1
 			}
-			719 = {
-				add_province_modifier = {
-					name = "steal_manchurian_wealth"
-					duration = 0
-				}
-				change_trade_goods = gold
 			}
-			2189 = {
-				add_province_modifier = {
-					name = "steal_manchurian_wealth"
-					duration = 0
-				}
-				change_trade_goods = silk
+            719 = {
+			change_trade_goods = gold
+                                
+			add_province_modifier = {
+			name = "steal_manchurian_wealth"
+				duration = -1
 			}
-		}
+			}
+            716 = {
+			change_trade_goods = ivory
+                        add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			add_province_modifier = {
+			name = "steal_manchurian_wealth"
+				duration = -1
+			}
+			}
+            4222 = {	
+			change_trade_goods = paper
+                          add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+            add_province_modifier = {
+			name = "steal_manchurian_wealth"
+				duration = -1
+			}
+			2117 = {
+			change_trade_goods = ivory
+			add_province_modifier = {
+			name = "steal_manchurian_wealth"
+			duration = -1
+			}
+			}
+			
+			}
 	}
-	invasion_of_uzbek_mission = {
-		icon = 
-		required_missions = { conquest_of_manchuria_mission }
-		position = 4
-		provinces_to_highlight = {
-			province_id = 476
-		}
+	}
+	
+	conquer_uzbeck = {
+		icon = mission_conquer_5_states
+		required_missions = { invade_mongolia_mission }
+		
+		
 		trigger = {
-			476 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+			owns = 	476
 		}
 		effect = {
 			add_country_modifier = {
-				name = "uzbeck_horses"
-				duration = 0
+			name = "uzbeck_horses"
+			duration = -1
 			}
 			add_country_modifier = {
-				name = "uzbeck_recovery"
-				duration = 5475
+			name = "uzbeck_recovery"
+			duration = 5475
 			}
-			west_siberia = {
+			central_asia_region = {
 				limit = {
-					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
 				}
 				add_permanent_claim = ROOT
 			}
-			central_asia = {
+			west_siberia_region = {
 				limit = {
-					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
 				}
 				add_permanent_claim = ROOT
 			}
-			}
-		}
-	prelude_to_the_great_khanate_mission = {
-		icon = 
-		required_missions = { invasion_of_uzbek_mission }
-		position = 5
+			
+	}
+	}
+	
+	
+	prelude_to_great_khanate = {
+		icon = mission_assemble_an_army
+		required_missions = { conquer_uzbeck  invade_manchuria  invade_northern_china }
+		
 		trigger = {
-			AND ={
 			num_of_cavalry = 60
-			num_of_owned_provinces_with = {
-				value = 100
-				is_overseas = no
-			}
-			}
+			num_of_cities = 100 
+					
 		}
+		
 		effect = {
-		add_country_modifier = {
+		
+			ural_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			russia_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			crimea_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			khorasan_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			persia_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			xinan_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			south_china_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			
+			add_country_modifier = {
 			name = "rise_of_mongol_empire"
-			duration = 0
+			duration = -1
+			}
+			
+			
 		}
 		}
-	}
-	}
-	}
-}
+		
