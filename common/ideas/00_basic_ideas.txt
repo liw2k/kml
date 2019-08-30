@@ -458,7 +458,7 @@ trade_ideas = {
   	}
 	gt_three = {
 		trade_steering = 0.33
-		naval_tradition = 0.5
+		navy_tradition = 0.5
 	}
 	gt_four = {
 		trade_range_modifier = 0.50

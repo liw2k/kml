@@ -806,7 +806,7 @@ encouragement_of_merchant_navy = {
 		full_idea_group = expansion_ideas
 	}
 	
-	inflation = -0.05
+	inflation_reduction = 0.05
 	production_efficiency = 0.075
  
 
