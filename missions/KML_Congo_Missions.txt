@@ -403,7 +403,7 @@ kon_missions_4 = {
 				type = all
 				owned_by = ROOT
 				NOT = {
-					local_unrest = 1
+					unrest = 1
 					local_autonomy = 50
 				}
 			}
@@ -411,7 +411,7 @@ kon_missions_4 = {
 				type = all
 				owned_by = ROOT
 				NOT = {
-					local_unrest = 1
+					unrest = 1
 					local_autonomy = 50
 				}
 			}
