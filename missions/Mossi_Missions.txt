@@ -174,9 +174,9 @@ msi_1 = {
         name = msi_empire
         duration = -1
       }
-      sahel_area = { add_permanent_claim = ROOT }
-      niger_area = { add_permanent_claim = ROOT }
-      guinea_area = { add_permanent_claim = ROOT }
+      sahel_region = { add_permanent_claim = ROOT }
+      niger_region = { add_permanent_claim = ROOT }
+      guinea_region = { add_permanent_claim = ROOT }
     }
   }
 }
