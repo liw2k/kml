@@ -174,9 +174,9 @@ msi_1 = {
         name = msi_empire
         duration = -1
       }
-      sahel_area = { add_permanent_claim = ROOT }
-      niger_area = { add_permanent_claim = ROOT }
-      guinea_area = { add_permanent_claim = ROOT }
+      sahel_region = { add_permanent_claim = ROOT }
+      niger_region = { add_permanent_claim = ROOT }
+      guinea_region = { add_permanent_claim = ROOT }
     }
   }
 }
@@ -806,7 +806,7 @@ msi_economy_1 = {
           name = msi_colonial_expansion
           duration = 9125
         }
-        west_african_coast_area = {
+        west_african_coast  = {
           add_province_modifier = {
             name = msi_coastal_growth
             duration = 9125
