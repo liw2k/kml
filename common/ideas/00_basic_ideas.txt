@@ -79,7 +79,7 @@ aristocracy_ideas = {
 	}
 	serfdom = {
 		mil_tech_cost_modifier = -0.1
-		barrage = -0.25
+		global_regiment_recruit_speed = -0.1 
 	}
 	noble_knights = {
 		fire_damage_received = -0.075
